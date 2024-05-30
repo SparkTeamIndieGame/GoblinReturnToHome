@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float _speed, _smoothRotation;
+    [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _maxJumpCount;
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _input;
     private Vector3 _direction;
 
-    private float _xEuler;
+    //private float _xEuler;
     private float _gravity = -9.8f;
     private float _velocity = -1;
     private float _jumpCount;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         Gravity();
         MoveForward();
-        RotationForward();
+        //RotationForward();
     }
 
 
@@ -64,15 +64,15 @@ public class PlayerController : MonoBehaviour
         _direction = new Vector3(_input.x, 0, 0);
     }
 
-    private void RotationForward()
-    {
-        if (_input.x > 0)
-            _xEuler = 0;
-        else if (_input.x < 0)
-            _xEuler = -180;
+    //private void RotationForward()
+    //{
+    //    if (_input.x > 0)
+    //        _xEuler = 0;
+    //    else if (_input.x < 0)
+    //        _xEuler = -180;
 
-        transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, _xEuler, 0), _smoothRotation * Time.deltaTime);
-    }
+    //    transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, _xEuler, 0), _smoothRotation * Time.deltaTime);
+    //}
 
     public void Jump(InputAction.CallbackContext context)
     {
