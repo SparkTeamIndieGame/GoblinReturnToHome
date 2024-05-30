@@ -13,12 +13,14 @@ public class Weapon : MonoBehaviour
 
     [SerializeField] private TypeWeapon _typeWeapon;
     [SerializeField] private float _delay;
+    [SerializeField] private float _maxBulletMachine, _delayMachine;
     [SerializeField] private float _ammunitionStore;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private Transform[] _pointBullet;
 
     private bool _standartWeapon;
     private bool _downMouse, _fire = true;
+    private int _currentBulletMachine;
 
     private void Awake()
     {
@@ -40,11 +42,24 @@ public class Weapon : MonoBehaviour
         Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
     }
 
+    private void GunUse()
+    {
+        Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
+        _ammunitionStore--;
+    }
+
     private void ShotgunUse()
     {
         for(int i =0; i<_pointBullet.Length; i++)
         Instantiate(_bullet, _pointBullet[i].position, _pointBullet[i].rotation);
 
+        _ammunitionStore -= 3;
+
+    }
+
+    private void MachineUse()
+    {
+        StartCoroutine("DelayBulletMachine");
     }
 
     private void InstantiateBullet()
@@ -55,14 +70,14 @@ public class Weapon : MonoBehaviour
             if (_typeWeapon == TypeWeapon.Slaughter)
                 SlaughterUse();
             else if (_typeWeapon == TypeWeapon.Gun)
-                SlaughterUse();
+                GunUse();
             else if (_typeWeapon == TypeWeapon.Shotgun)
                 ShotgunUse();
             else if (_typeWeapon == TypeWeapon.Machine)
-                print("Automat");
+                MachineUse();
 
-            if (!_standartWeapon)
-                _ammunitionStore--;
+            //if (!_standartWeapon)
+            //    _ammunitionStore--;
             StartCoroutine("Delay");
         }
     }
@@ -73,6 +88,20 @@ public class Weapon : MonoBehaviour
         yield return new WaitForSeconds(_delay);
         _fire = true;
     }
+
+    IEnumerator DelayBulletMachine()
+    {
+        while(_currentBulletMachine < _maxBulletMachine)
+        {
+            Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
+            _ammunitionStore--;
+            _currentBulletMachine++;
+            yield return new WaitForSeconds(_delayMachine);
+        }
+
+        _currentBulletMachine = 0;
+    }
+
 
 
 }
