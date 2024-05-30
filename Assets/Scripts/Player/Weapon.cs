@@ -4,56 +4,59 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
-    public enum Weapons
+
+    private enum TypeWeapon
     {
-        Slaughter, Pistol, Shotgun, Machine
+        Slaughter, Gun, Shotgun, Machine
     }
 
+
+    [SerializeField] private TypeWeapon _typeWeapon;
     [SerializeField] private float _delay;
     [SerializeField] private float _ammunitionStore;
     [SerializeField] private GameObject _bullet;
-    [SerializeField] private Transform _pointWeapon;
-    [SerializeField] private bool _standartWeapon;
+    [SerializeField] private Transform[] _pointBullet;
+
+    private bool _standartWeapon;
     private bool _downMouse, _fire = true;
-    public Weapons weapons;
 
-    public class Slaughter
+    private void Awake()
     {
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(weapons == Weapons.Slaughter)
-        {
-
-        }
-
+        if (_typeWeapon == TypeWeapon.Slaughter)
+            _standartWeapon = true;
     }
 
     public void Fire(InputAction.CallbackContext context )
     {
-        _downMouse = context.started;
-        StartCoroutine("InstantiateBullet");
+        if(gameObject.activeInHierarchy)
+        {
+            _downMouse = context.started;
+            InstantiateBullet();
+        }
     }
 
-    IEnumerator InstantiateBullet()
+    private void SlaughterUse()
+    {
+        Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
+    }
+
+    private void InstantiateBullet()
     {
 
         if(_fire && (_ammunitionStore!=0 || _standartWeapon))
         {
-            Instantiate(_bullet, _pointWeapon.position, _pointWeapon.rotation);
+            if (_typeWeapon == TypeWeapon.Slaughter)
+                SlaughterUse();
+            else if (_typeWeapon == TypeWeapon.Gun)
+                SlaughterUse();
+            else if (_typeWeapon == TypeWeapon.Shotgun)
+                print("ShotGun");
+            else if (_typeWeapon == TypeWeapon.Machine)
+                print("Automat");
+
             if (!_standartWeapon)
                 _ammunitionStore--;
             StartCoroutine("Delay");
-            yield return null;
         }
     }
 
