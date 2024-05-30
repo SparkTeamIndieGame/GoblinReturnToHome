@@ -40,6 +40,13 @@ public class Weapon : MonoBehaviour
         Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
     }
 
+    private void ShotgunUse()
+    {
+        for(int i =0; i<_pointBullet.Length; i++)
+        Instantiate(_bullet, _pointBullet[i].position, _pointBullet[i].rotation);
+
+    }
+
     private void InstantiateBullet()
     {
 
@@ -50,7 +57,7 @@ public class Weapon : MonoBehaviour
             else if (_typeWeapon == TypeWeapon.Gun)
                 SlaughterUse();
             else if (_typeWeapon == TypeWeapon.Shotgun)
-                print("ShotGun");
+                ShotgunUse();
             else if (_typeWeapon == TypeWeapon.Machine)
                 print("Automat");
 

@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ChangeWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapon;
+    [SerializeField] private PlayerInput PlayerInput;
     int num;
     // Update is called once per frame
     void Update()
@@ -45,4 +47,9 @@ public class ChangeWeapon : MonoBehaviour
                 weapon[i].SetActive(true);
         }
     }
+
+    //public void Fire(InputAction.CallbackContext context)
+    //{
+        
+    //}
 }
