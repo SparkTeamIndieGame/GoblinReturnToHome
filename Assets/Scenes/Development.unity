@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47302266}
   - component: {fileID: 47302267}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -172,6 +172,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 1
   _delay: 1
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 10
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet:
@@ -1001,7 +1003,7 @@ GameObject:
   - component: {fileID: 187230947}
   - component: {fileID: 187230946}
   - component: {fileID: 187230945}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1106,7 +1108,7 @@ GameObject:
   - component: {fileID: 206447962}
   - component: {fileID: 206447961}
   - component: {fileID: 206447960}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1213,7 @@ GameObject:
   - component: {fileID: 216383826}
   - component: {fileID: 216383825}
   - component: {fileID: 216383824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1423,7 @@ GameObject:
   - component: {fileID: 267389547}
   - component: {fileID: 267389546}
   - component: {fileID: 267389545}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1736,7 +1738,7 @@ GameObject:
   - component: {fileID: 431257708}
   - component: {fileID: 431257707}
   - component: {fileID: 431257706}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 694526221}
   - component: {fileID: 694526222}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,7 +2302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _typeWeapon: 3
-  _delay: 0.5
+  _delay: 1
+  _maxBulletMachine: 3
+  _delayMachine: 0.1
   _ammunitionStore: 15
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet:
@@ -2383,7 +2387,7 @@ GameObject:
   - component: {fileID: 731008340}
   - component: {fileID: 731008339}
   - component: {fileID: 731008338}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2801,7 +2805,7 @@ GameObject:
   m_Component:
   - component: {fileID: 811584590}
   - component: {fileID: 811584591}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HandPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2967,7 +2971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851880226}
   - component: {fileID: 851880227}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ShotGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3009,6 +3013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 2
   _delay: 2.5
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 4
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet:
@@ -3132,7 +3138,7 @@ GameObject:
   - component: {fileID: 891610451}
   - component: {fileID: 891610450}
   - component: {fileID: 891610449}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3236,7 +3242,7 @@ GameObject:
   - component: {fileID: 917428961}
   - component: {fileID: 917428960}
   - component: {fileID: 917428959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerSkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3498,7 +3504,7 @@ GameObject:
   - component: {fileID: 968361272}
   - component: {fileID: 968361271}
   - component: {fileID: 968361270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3604,7 +3610,7 @@ GameObject:
   - component: {fileID: 1016640953}
   - component: {fileID: 1016640952}
   - component: {fileID: 1016640951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3640,6 +3646,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 0
   _delay: 1
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet: []
@@ -3933,7 +3941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1028767439}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet (2)
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -4339,7 +4347,7 @@ GameObject:
   - component: {fileID: 1160020900}
   - component: {fileID: 1160020899}
   - component: {fileID: 1160020898}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: s (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4442,7 +4450,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1198063398}
   - component: {fileID: 1198063399}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4485,6 +4493,7 @@ MonoBehaviour:
   - {fileID: 47302265}
   - {fileID: 851880225}
   - {fileID: 694526220}
+  PlayerInput: {fileID: 0}
 --- !u!1 &1211957800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4494,7 +4503,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1211957801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -4623,7 +4632,7 @@ GameObject:
   - component: {fileID: 1253394405}
   - component: {fileID: 1253394404}
   - component: {fileID: 1253394403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GunScin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4659,6 +4668,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 0
   _delay: 1
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet: []
@@ -4742,7 +4753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1261343958}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -4882,7 +4893,7 @@ GameObject:
   - component: {fileID: 1278166487}
   - component: {fileID: 1278166486}
   - component: {fileID: 1278166485}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slaughter (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4918,6 +4929,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 0
   _delay: 1
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet: []
@@ -5107,7 +5120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1388784721}
   - component: {fileID: 1388784722}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slaughter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5147,6 +5160,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 0
   _delay: 2
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet:
@@ -5163,7 +5178,7 @@ GameObject:
   - component: {fileID: 1418301179}
   - component: {fileID: 1418301178}
   - component: {fileID: 1418301177}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5898,7 +5913,7 @@ GameObject:
   - component: {fileID: 1551935596}
   - component: {fileID: 1551935595}
   - component: {fileID: 1551935598}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6094,7 +6109,7 @@ GameObject:
   - component: {fileID: 1639659063}
   - component: {fileID: 1639659062}
   - component: {fileID: 1639659061}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6407,7 +6422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1663123167}
   - component: {fileID: 1663123168}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6559,7 +6574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1676281384}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -6590,7 +6605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1714910753}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -6835,7 +6850,7 @@ GameObject:
   - component: {fileID: 1836090651}
   - component: {fileID: 1836090650}
   - component: {fileID: 1836090649}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slaughter (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6871,6 +6886,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _typeWeapon: 0
   _delay: 1
+  _maxBulletMachine: 0
+  _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
   _pointBullet: []
@@ -7059,7 +7076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902368170}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointBullet (1)
   m_TagString: PointBullet
   m_Icon: {fileID: 0}
@@ -7093,7 +7110,7 @@ GameObject:
   - component: {fileID: 1961722702}
   - component: {fileID: 1961722701}
   - component: {fileID: 1961722700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
