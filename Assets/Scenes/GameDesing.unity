@@ -333,6 +333,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82413056}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &216678143
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 216678144}
+  m_Layer: 0
+  m_Name: PointBullet (1)
+  m_TagString: PointBullet
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &216678144
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216678143}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.776, y: 0.375, z: 1.807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659894457}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &250997548
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,7 +713,6 @@ GameObject:
   - component: {fileID: 398811858}
   - component: {fileID: 398811857}
   - component: {fileID: 398811856}
-  - component: {fileID: 398811855}
   m_Layer: 0
   m_Name: Slaughter (3)
   m_TagString: Untagged
@@ -705,25 +735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1146349520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -16}
---- !u!114 &398811855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 398811853}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeWeapon: 0
-  _delay: 1
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 0
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet: []
 --- !u!65 &398811856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1157,37 +1168,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 552542343}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &572748594
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 572748595}
-  m_Layer: 0
-  m_Name: PointBullet (2)
-  m_TagString: PointBullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &572748595
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572748594}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.11320323, y: 0, z: 0, w: 0.9935719}
-  m_LocalPosition: {x: 0, y: 0, z: 1.73}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1659894457}
-  m_LocalEulerAnglesHint: {x: 13, y: 0, z: 0}
 --- !u!1 &643956781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1221,7 @@ MonoBehaviour:
   _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
+  _bulletTest: {fileID: 0}
   _pointBullet: []
 --- !u!65 &643956784
 BoxCollider:
@@ -1357,17 +1338,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 703528411}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
+  m_Script: {fileID: 11500000, guid: e2235f7b231d5c04aa0f85be1924caad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _typeWeapon: 1
-  _delay: 1
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 10
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet:
+  SpawnPoint:
   - {fileID: 877263825}
+  ShootPeriod: 0.3
+  BulletPrefab: {fileID: 718026892413350404, guid: 7e7e873af63e19e41940565b16c39689, type: 3}
+  BulletSpeed: 15
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,7 +1452,7 @@ GameObject:
   m_Layer: 0
   m_Name: PointBullet
   m_TagString: PointBullet
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1487,7 +1465,7 @@ Transform:
   m_GameObject: {fileID: 877263824}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.012, y: 0.505, z: 1.213}
+  m_LocalPosition: {x: 0.771, y: 0.509, z: 1.179}
   m_LocalScale: {x: 1.0446981, y: 0.23718952, z: 0.27115917}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1710,7 +1688,7 @@ GameObject:
   m_Layer: 0
   m_Name: PointBullet
   m_TagString: PointBullet
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1722,13 +1700,44 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1004342876}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 1.73}
+  m_LocalRotation: {x: -0.13052596, y: -0, z: 0.000000029802319, w: 0.99144495}
+  m_LocalPosition: {x: 0.776, y: 0.375, z: 1.807}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1659894457}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -15, y: 0, z: 0}
+--- !u!1 &1049937677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1049937678}
+  m_Layer: 0
+  m_Name: PointBullet (2)
+  m_TagString: PointBullet
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1049937678
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049937677}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.13052596, y: -0, z: -0.000000029802319, w: 0.99144495}
+  m_LocalPosition: {x: 0.776, y: 0.374, z: 1.807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1659894457}
+  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
 --- !u!1 &1094088548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,17 +1888,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146349519}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
+  m_Script: {fileID: 11500000, guid: 112458d74ac6d8a4da2f1b64692718d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _typeWeapon: 0
-  _delay: 2
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 0
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet:
+  SpawnPoint:
   - {fileID: 2025595168}
+  ShootPeriod: 0.5
+  BulletPrefab: {fileID: 7454869764325469811, guid: f658e3f06c5d0ee4e93f0d41230da4e1, type: 3}
+  BulletSpeed: 10
 --- !u!1 &1247638980
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2398,7 @@ MonoBehaviour:
     m_ActionName: Gameplay/Mouse[/Mouse/position]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1146349521}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
@@ -2404,7 +2410,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 703528413}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
@@ -2416,7 +2422,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1659894458}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
@@ -2428,7 +2434,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1760995543}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Weapon, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 0
@@ -2722,7 +2728,6 @@ GameObject:
   - component: {fileID: 1569646396}
   - component: {fileID: 1569646395}
   - component: {fileID: 1569646394}
-  - component: {fileID: 1569646393}
   m_Layer: 0
   m_Name: Slaughter (2)
   m_TagString: Untagged
@@ -2745,25 +2750,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1146349520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 16.095}
---- !u!114 &1569646393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569646391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeWeapon: 0
-  _delay: 1
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 0
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet: []
 --- !u!65 &1569646394
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2851,7 +2837,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1659894457
 Transform:
   m_ObjectHideFlags: 0
@@ -2866,8 +2852,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1004342877}
-  - {fileID: 2044245947}
-  - {fileID: 572748595}
+  - {fileID: 216678144}
+  - {fileID: 1049937678}
   - {fileID: 552542344}
   - {fileID: 382370237}
   - {fileID: 1461813293}
@@ -2882,19 +2868,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1659894456}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
+  m_Script: {fileID: 11500000, guid: 1caca85840db3984f918cfdee1e9009c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _typeWeapon: 2
-  _delay: 2.5
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 4
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet:
+  SpawnPoint:
   - {fileID: 1004342877}
-  - {fileID: 2044245947}
-  - {fileID: 572748595}
+  - {fileID: 216678144}
+  - {fileID: 1049937678}
+  ShootPeriod: 1
+  BulletPrefab: {fileID: 3413354746420974443, guid: 64000ea9e649c3546bc9d1271c261340, type: 3}
+  BulletSpeed: 13
 --- !u!1 &1699084114
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,6 +3117,7 @@ MonoBehaviour:
   _delayMachine: 0
   _ammunitionStore: 0
   _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
+  _bulletTest: {fileID: 0}
   _pointBullet: []
 --- !u!65 &1731569287
 BoxCollider:
@@ -3215,34 +3199,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1760995544}
-  - component: {fileID: 1760995543}
+  - component: {fileID: 1760995545}
   m_Layer: 0
   m_Name: Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1760995543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1760995542}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29974f64dd954065bb92efc1555c492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _typeWeapon: 3
-  _delay: 0.5
-  _maxBulletMachine: 0
-  _delayMachine: 0
-  _ammunitionStore: 15
-  _bullet: {fileID: 999124597971900062, guid: da3961765cc84421893037b9fc12fa38, type: 3}
-  _pointBullet:
-  - {fileID: 1988117274}
+  m_IsActive: 1
 --- !u!4 &1760995544
 Transform:
   m_ObjectHideFlags: 0
@@ -3264,6 +3228,23 @@ Transform:
   - {fileID: 1486553522}
   m_Father: {fileID: 1859000110}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1760995545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760995542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d88d4bd600635046b6055df2832875d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPoint:
+  - {fileID: 1988117274}
+  ShootPeriod: 0.1
+  BulletPrefab: {fileID: 5201637862152511336, guid: fcfd0d64bd43fcb409d77e2ff5146eac, type: 3}
+  BulletSpeed: 20
 --- !u!1 &1858370936
 GameObject:
   m_ObjectHideFlags: 0
@@ -3535,7 +3516,7 @@ GameObject:
   m_Layer: 0
   m_Name: PointBullet
   m_TagString: PointBullet
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3548,7 +3529,7 @@ Transform:
   m_GameObject: {fileID: 1988117273}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.442, z: 1.871}
+  m_LocalPosition: {x: 0.749, y: 0.424, z: 1.871}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3673,7 +3654,7 @@ GameObject:
   m_Layer: 0
   m_Name: PointBullet
   m_TagString: PointBullet
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3686,43 +3667,12 @@ Transform:
   m_GameObject: {fileID: 2025595167}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.044, y: 1.049, z: 0.345}
+  m_LocalPosition: {x: 0.727, y: 0.964, z: 0.35}
   m_LocalScale: {x: 0.3145353, y: 0.6223932, z: 0.4778978}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1146349520}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2044245946
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2044245947}
-  m_Layer: 0
-  m_Name: PointBullet (1)
-  m_TagString: PointBullet
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2044245947
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2044245946}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.11320323, y: 0, z: 0, w: 0.9935719}
-  m_LocalPosition: {x: 0, y: 1, z: 1.73}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1659894457}
-  m_LocalEulerAnglesHint: {x: -13, y: 0, z: 0}
 --- !u!1 &2074086277
 GameObject:
   m_ObjectHideFlags: 0

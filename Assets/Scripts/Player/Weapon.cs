@@ -16,11 +16,13 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _maxBulletMachine, _delayMachine;
     [SerializeField] private float _ammunitionStore;
     [SerializeField] private GameObject _bullet;
+    [SerializeField] private Bullet _bulletTest;
     [SerializeField] private Transform[] _pointBullet;
 
     private bool _standartWeapon;
     private bool _downMouse, _fire = true;
     private int _currentBulletMachine;
+
 
     private void Awake()
     {
@@ -46,6 +48,7 @@ public class Weapon : MonoBehaviour
     {
         Instantiate(_bullet, _pointBullet[0].position, _pointBullet[0].rotation);
         _ammunitionStore--;
+        
     }
 
     private void ShotgunUse()
