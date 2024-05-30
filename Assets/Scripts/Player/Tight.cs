@@ -4,6 +4,7 @@ using UnityEngine.Windows;
 
 public class Tight : MonoBehaviour
 {
+
     [SerializeField] private Transform _hand, _playerSkin;
     [SerializeField] private float _speed = 5f, _smoothRotation;
     private Camera _camera;

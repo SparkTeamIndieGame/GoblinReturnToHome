@@ -4,12 +4,24 @@ using System.Collections;
 
 public class Weapon : MonoBehaviour
 {
+    public enum Weapons
+    {
+        Slaughter, Pistol, Shotgun, Machine
+    }
+
     [SerializeField] private float _delay;
     [SerializeField] private float _ammunitionStore;
     [SerializeField] private GameObject _bullet;
     [SerializeField] private Transform _pointWeapon;
     [SerializeField] private bool _standartWeapon;
     private bool _downMouse, _fire = true;
+    public Weapons weapons;
+
+    public class Slaughter
+    {
+
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +31,11 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(weapons == Weapons.Slaughter)
+        {
+
+        }
+
     }
 
     public void Fire(InputAction.CallbackContext context )
