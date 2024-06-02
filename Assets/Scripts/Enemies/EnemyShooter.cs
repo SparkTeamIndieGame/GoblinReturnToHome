@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : EnemyBase
@@ -15,7 +13,7 @@ public class Enemy : EnemyBase
 
     public override void Update()
     {
-        base.Monitoring();
+        base.Update();
 
         Timer();
 
