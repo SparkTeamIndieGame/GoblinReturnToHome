@@ -44,7 +44,7 @@ public class CreatingLvl : MonoBehaviour
     }
     public void CreateSize()
     {
-        downPlatforms = new GameObject[pltformCount];
+        //downPlatforms = new GameObject[pltformCount];
         upPlatform = new GameObject[pltformCount];
 
         
@@ -56,6 +56,7 @@ public class CreatingLvl : MonoBehaviour
     }
     public void CreateDownPlatform()
     {
+        downPlatforms = new GameObject[pltformCount];
         float scaleLastplatform = 0.0f;
         
         float zeroPoint = -1;
@@ -63,12 +64,13 @@ public class CreatingLvl : MonoBehaviour
         float currentPosX = pointStartPlatform;
         for (int i = 0; i < downPlatforms.Length; i++) 
         {
-            downPlatforms[i] = newOlatform;
+            downPlatforms[i] = downPlatformPrefab;
+            AutoCreateSize(downPlatforms[i]);
             GameObject newOlatform = Instantiate(downPlatforms[i], new Vector3(currentPosX + (downPlatforms[i].transform.localScale.x / 2), Random.Range(zeroPoint, maxPlayerJump), 0.0f), Quaternion.identity);
-           
+            
+
             currentPosX += downPlatforms[i].transform.localScale.x + diatanceBetweensDownPlatform;
 
-            downPlatforms[i] = newOlatform;
             
 
 
