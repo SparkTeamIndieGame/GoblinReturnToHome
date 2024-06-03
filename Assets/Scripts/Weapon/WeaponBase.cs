@@ -10,17 +10,23 @@ public abstract class WeaponBase : MonoBehaviour
     protected float timer;
     readonly protected float MaxPlayerSpeed = 10.0f;
 
-    public virtual void Update()
+    private void Update()
     {
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
         {
             if (Input.GetMouseButton(0))
             {
-                timer = 0.0f;
-                GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
-                newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed);
+                Shoot();
+                timer = 0;
             }
         }
     }
+
+    public virtual void Shoot()
+    {
+        GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
+        newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed);
+    }
+
 }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4670226256233941117}
   - component: {fileID: 1811315896194551003}
   - component: {fileID: 299771523587999365}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: MachineBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,9 +131,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 8
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &299771523587999365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,5 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5835f09b246bdcf43890c1aa35b9a9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damage: 4
   _lifeTime: 4
-  _damage: 0
