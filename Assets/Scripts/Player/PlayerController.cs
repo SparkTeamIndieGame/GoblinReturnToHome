@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.TryGetComponent(out BulletTest damage))
+        if (collision.gameObject.TryGetComponent(out BulletCharacter damage))
         {
             Health -= damage._damage;
             print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {Health}, ");
