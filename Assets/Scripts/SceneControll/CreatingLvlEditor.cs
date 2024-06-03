@@ -7,10 +7,11 @@ public class CreatingLvlEditor : Editor
     public override void OnInspectorGUI()
     {
         CreatingLvl cl = (CreatingLvl)target;
-        if (GUILayout.Button("Create Platform")) cl.Create();
-        if (GUILayout.Button("TEST")) cl.TestLink();
-        //if (GUILayout.Button("Delete")) cl.Delete();
-        //if (GUILayout.Button("Full random")) cl.FullRandom();
+        if (GUILayout.Button("TakeLinks!#1")) cl.TakeLinks();
+        if (GUILayout.Button("CreateSize!#2")) cl.CreateSize();
+        if (GUILayout.Button("CreateDownPlatform!#3")) cl.CreateDownPlatform();
+        if (GUILayout.Button("CreateUpPlatform!#4")) cl.CreateUpPlatform();
+
     }
 }
 #endif

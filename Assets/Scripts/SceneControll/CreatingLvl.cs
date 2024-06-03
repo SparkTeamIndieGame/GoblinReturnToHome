@@ -1,50 +1,101 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Metadata;
 
 public class CreatingLvl : MonoBehaviour
 {
-    public GameObject prefab;
-    public Vector3 startPlatfopm;
-    public float distance;
-    public int count;
     private LinksToCreating _linksToCreating;
 
-    private Vector3 current_pos;
-    public void Create()
-    {
-       
-        
-        Vector2 offsetY = FindAnyObjectByType<TextureTiling>().GetComponent<SpriteRenderer>().size;
-        float zeroCordinatos = FindAnyObjectByType<TextureTiling>().gameObject.transform.position.y;
-        float maxJump = 4.0f;
-        
-        prefab = Resources.Load<GameObject>("Platform (4)");
-        GameObject children = prefab.GetComponentInChildren<BoxCollider>().gameObject;
-        current_pos = new Vector3(-160.0f,3.0f,0.0f);
-        //1st lvl
-        for (int i = 0; i <= 17; i++)
-        {
-            
-            Instantiate(prefab, new Vector3(current_pos.x + (children.transform.localScale.x / 2), Random.Range(offsetY.y/2 + zeroCordinatos, offsetY.y/2 + zeroCordinatos + maxJump)), Quaternion.identity );
-            current_pos.x += (35.0f + children.transform.localScale.x);
-            //current_pos.x += 35.0f;
+    private float maxPlayerJump;
+    private float pointStartPlatform;
 
-        }
-        //secondlvl
-        current_pos = new Vector3(-160.0f, 3.0f, 0.0f);
-        for (int i = 0; i <= 17; i++)
-        {
-            
-            Instantiate(prefab, new Vector3(current_pos.x + (children.transform.localScale.x / 2) + 17.5f, Random.Range(maxJump + 1, maxJump * 2)), Quaternion.identity);
-            current_pos.x += (52.5f + children.transform.localScale.x);
-        }
-       
-    }
-    public void TestLink()
+
+    private GameObject downPlatformPrefab;
+    private GameObject upPlatformPrefab;
+
+    private Vector2 sizeMinMaxX;
+    private Vector2 sizeMinMaxY;
+  
+    private float diatanceBetweensDownPlatform;
+    private float diatanceBetweensUpPlatform;
+
+    private float maxPosYDownPlatform;
+    private float maxPosYUpPlatform;
+
+    private int pltformCount;
+
+
+    private GameObject[] downPlatforms;
+    private GameObject[] upPlatform;
+    
+    public void TakeLinks()
     {
         _linksToCreating = this.gameObject.GetComponent<LinksToCreating>();
-        
-        Debug.Log(_linksToCreating.speed);
+        maxPlayerJump = _linksToCreating.MaxPlayerJump;
+        pointStartPlatform = _linksToCreating.PointStartPlatform;
+        downPlatformPrefab = _linksToCreating.downPlatformPrefab;
+        upPlatformPrefab = _linksToCreating.upPlatformPrefab;
+        sizeMinMaxX = _linksToCreating.SizeMinMaxX;
+        sizeMinMaxY = _linksToCreating.SizeMinMaxY;
+        diatanceBetweensDownPlatform = _linksToCreating.DiatanceBetweensDownPlatform;
+        diatanceBetweensUpPlatform = _linksToCreating.DiatanceBetweensUpPlatform ;
+        pltformCount = _linksToCreating.PlatformCount;
     }
+    public void CreateSize()
+    {
+        downPlatforms = new GameObject[pltformCount];
+        upPlatform = new GameObject[pltformCount];
+
+        
+    }
+    private void AutoCreateSize(GameObject prefab)
+    {
+        prefab.transform.localScale = new Vector3(Random.Range(sizeMinMaxX.x, sizeMinMaxX.y), Random.Range(sizeMinMaxY.x, sizeMinMaxY.y), 1.0f);
+
+    }
+    public void CreateDownPlatform()
+    {
+        float scaleLastplatform = 0.0f;
+        
+        float zeroPoint = -1;
+        maxPosYDownPlatform = zeroPoint + maxPlayerJump;
+        float currentPosX = pointStartPlatform;
+        for (int i = 0; i < downPlatforms.Length; i++) 
+        {
+            downPlatforms[i] = newOlatform;
+            GameObject newOlatform = Instantiate(downPlatforms[i], new Vector3(currentPosX + (downPlatforms[i].transform.localScale.x / 2), Random.Range(zeroPoint, maxPlayerJump), 0.0f), Quaternion.identity);
+           
+            currentPosX += downPlatforms[i].transform.localScale.x + diatanceBetweensDownPlatform;
+
+            downPlatforms[i] = newOlatform;
+            
+
+
+
+
+
+        }
+    }
+    public void CreateUpPlatform()
+    {
+        float scaleLastplatform = 0.0f;
+        float zeroPoint = -1;
+        //pointStartPlatform.x += diatanceBetweensDownPlatform / 2;
+        maxPosYUpPlatform = zeroPoint + (maxPlayerJump * 2);
+
+        for (int i = 0; i < upPlatform.Length; i++)
+        {
+            //Instantiate(upPlatform[i], new Vector3(pointStartPlatform.x + scaleLastplatform + diatanceBetweensUpPlatform, Random.Range(maxPosYDownPlatform + 1.0f, maxPosYUpPlatform), 0.0f), Quaternion.identity);
+            if (i == 0)
+            {
+                scaleLastplatform = 0.0f;
+            }
+            else
+            {
+                scaleLastplatform = downPlatforms[i - 1].transform.localScale.x / 2.0f;
+            }
+        }
+    }
+
 }
