@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8200326826609647799}
   - component: {fileID: 2559499848362111676}
   - component: {fileID: 5943424773457167000}
+  - component: {fileID: -2370332823123686611}
   m_Layer: 10
   m_Name: BonusHeal
   m_TagString: Untagged
@@ -50,7 +51,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -70,6 +71,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _insideObject: {fileID: 7452097192909007273}
   _rotationSpeed: 100
+--- !u!114 &-2370332823123686611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646903115927112803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 723672cf6b19db349a14f6d4accbbe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _addHealth: 0
 --- !u!1 &4305864787237256151
 GameObject:
   m_ObjectHideFlags: 0

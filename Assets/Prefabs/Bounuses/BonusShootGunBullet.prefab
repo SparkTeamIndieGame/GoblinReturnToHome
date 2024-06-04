@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 4948685393803943478}
   - component: {fileID: 4960143025387430279}
   - component: {fileID: 4420867575005549695}
+  - component: {fileID: -7616153009773582850}
   m_Layer: 10
   m_Name: BonusShootGunBullet
   m_TagString: Untagged
@@ -133,7 +134,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -153,6 +154,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _insideObject: {fileID: 7128643500260625968}
   _rotationSpeed: 80
+--- !u!114 &-7616153009773582850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644095239430833942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db8ba7ffec73b848bc1d738ecb3b498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 0}
+  _amuniceAdd: 0
+  _isWeaponBonus: 0
 --- !u!1 &7118096215666580867
 GameObject:
   m_ObjectHideFlags: 0
