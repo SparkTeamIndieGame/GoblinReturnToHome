@@ -5,6 +5,7 @@ public class FollowCamera : MonoBehaviour
 {
     [SerializeField] private  Transform _target;
     [SerializeField] private float _speed;
+    [SerializeField] private Transform _tight;
     private Vector3 _offset; // x =9.2; y = 7.3; z = -14;
     private float _posXLeft, _posXRight;
     private bool _forward = true;

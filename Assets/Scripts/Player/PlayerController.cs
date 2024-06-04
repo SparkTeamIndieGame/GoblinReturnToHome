@@ -1,17 +1,22 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public float Health;
+
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _maxJumpCount;
+    [SerializeField] private GameObject _reboot;
 
     private CharacterController _characterController;
 
     private Vector2 _input;
     private Vector3 _direction;
+    private Vector3 _blockZ;
 
     //private float _xEuler;
     private float _gravity = -9.8f;
@@ -29,7 +34,14 @@ public class PlayerController : MonoBehaviour
     {
         Gravity();
         MoveForward();
+        BlockTransformZ();
         //RotationForward();
+        if(Health <= 0)
+        {
+            print("Убтли су**");
+            _reboot.SetActive(true);
+            Destroy(gameObject);
+        }
     }
 
 
@@ -64,6 +76,15 @@ public class PlayerController : MonoBehaviour
         _direction = new Vector3(_input.x, 0, 0);
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.TryGetComponent(out BulletCharacter damage))
+        {
+            Health -= damage._damage;
+            print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {Health}, ");
+        }
+    }
+
     //private void RotationForward()
     //{
     //    if (_input.x > 0)
@@ -81,8 +102,13 @@ public class PlayerController : MonoBehaviour
        
         _jumpCount++;
         _velocity = _jumpPower;
-       
+    }
 
+    private void BlockTransformZ()
+    {
+        _blockZ.x = transform.position.x;
+        _blockZ.y = transform.position.y;
+        transform.position = _blockZ;
     }
 
 }

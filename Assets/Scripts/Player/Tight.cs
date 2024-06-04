@@ -38,9 +38,10 @@ public class Tight : MonoBehaviour
 
     private void RotateHand()
     {
-        _hand.rotation = Quaternion.Slerp(_hand.rotation, Quaternion.LookRotation(transform.position - _hand.position), _speed * Time.deltaTime);
-        //Vector3 angle = transform.position - _hand.position;
-        //_hand.rotation = Quaternion.LookRotation(angle);
+        //_hand.rotation = Quaternion.Slerp(_hand.rotation, Quaternion.LookRotation(transform.position - _hand.position), _speed * Time.deltaTime);
+        Vector3 angle = transform.position - _hand.position;
+        Vector3 angleXY = new Vector3(angle.x, angle.y, 0);
+        _hand.rotation = Quaternion.LookRotation(angleXY * _speed * Time.deltaTime);
     }
 
 
