@@ -4,6 +4,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public float Health;
 
     [SerializeField] private float _speed; //_smoothRotation;
@@ -110,5 +111,11 @@ public class PlayerController : MonoBehaviour
         _blockZ.y = transform.position.y;
         transform.position = _blockZ;
     }
+    //Для бонуса здоровья!
+    public void AddHealth(float value)
+    {
+        Health += value;
+    }
+    
 
 }
