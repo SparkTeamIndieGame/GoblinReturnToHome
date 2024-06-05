@@ -28,6 +28,8 @@ public class ActiveGuns : MonoBehaviour
             if (_weaponsLink[i].GetActualScore() > 0)
             {
                 _weaponsLink[i].gameObject.SetActive(true);
+                //_weaponsLink[i].UseActualWeaponSprite();
+                //_weaponsLink[i].UseActualAmourCount();
                 return;
             }
         }

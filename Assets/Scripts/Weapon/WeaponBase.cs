@@ -1,9 +1,13 @@
-using System;
+﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class WeaponBase : MonoBehaviour
 {
     public static event Action OnWeaponChange;
+    public Sprite WeaponSprite;
+    public Image WeaponImage;
+    public Text ActualAmunitionScore;
     public  Transform[] SpawnPoint;
     public float ShootPeriod = 1.0f;
     public GameObject BulletPrefab;
@@ -23,6 +27,7 @@ public abstract class WeaponBase : MonoBehaviour
             StartAmunicionCount = Mathf.Infinity;
         }
         currentAmunicionCount = StartAmunicionCount;
+        UseActualAmourCount();
     }
     private void Update()
     {
@@ -53,11 +58,12 @@ public abstract class WeaponBase : MonoBehaviour
     public virtual void AddAmunicion(float value)
     {
         currentAmunicionCount += value;
+        UseActualAmourCount();
     }
     public virtual void RemoveAmunicion()
     {
         currentAmunicionCount -= 1;
-        
+        UseActualAmourCount();
     }
     public virtual void ChekingAmunicion()
     {
@@ -71,8 +77,28 @@ public abstract class WeaponBase : MonoBehaviour
     {
         return currentAmunicionCount;
     }
-    
-
+    public virtual void UseActualWeaponSprite()
+    {
+        WeaponImage.sprite = WeaponSprite;
+    }
+    public virtual void UseActualAmourCount()
+    {
+        if (GetActualScore() > int.MaxValue)
+        {
+            ActualAmunitionScore.transform.rotation = Quaternion.EulerAngles(0.0f, 0.0f, -17.0f);
+            ActualAmunitionScore.text = "8";
+        }
+        else
+        {
+            ActualAmunitionScore.transform.rotation = Quaternion.identity;
+            ActualAmunitionScore.text = GetActualScore().ToString();
+        }
+    }
+    public virtual void OnEnable()
+    {
+        UseActualWeaponSprite();
+        UseActualAmourCount();
+    }
 
 
 }

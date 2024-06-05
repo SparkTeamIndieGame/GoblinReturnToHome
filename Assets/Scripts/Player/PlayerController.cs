@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     
     public float Health;
+    private float maxHealth = 100;
 
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
@@ -115,7 +116,14 @@ public class PlayerController : MonoBehaviour
     //Для бонуса здоровья!
     public void AddHealth(float value)
     {
-        Health += value;
+        if ((Health += value) > maxHealth)
+        {
+            Health = maxHealth;
+        }
+        else
+        {
+            Health += value;
+        }
     }
     
 
