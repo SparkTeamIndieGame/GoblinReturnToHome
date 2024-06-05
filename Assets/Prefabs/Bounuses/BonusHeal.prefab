@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2559499848362111676}
   - component: {fileID: 5943424773457167000}
   - component: {fileID: -2370332823123686611}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: BonusHeal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _addHealth: 0
+  _playerController: {fileID: 0}
 --- !u!1 &4305864787237256151
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +96,7 @@ GameObject:
   - component: {fileID: 152847680115984993}
   - component: {fileID: 4918657725798608359}
   - component: {fileID: 8016936153945910065}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +179,7 @@ GameObject:
   - component: {fileID: 8111455938911776516}
   - component: {fileID: 5534292576266901500}
   - component: {fileID: 377338859972596392}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Plus
   m_TagString: Untagged
   m_Icon: {fileID: 0}

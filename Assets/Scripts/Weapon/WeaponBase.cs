@@ -26,6 +26,7 @@ public abstract class WeaponBase : MonoBehaviour
     }
     private void Update()
     {
+        //Debug.Log(currentAmunicionCount);
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
         {
@@ -33,7 +34,7 @@ public abstract class WeaponBase : MonoBehaviour
             {
                 Shoot();
                 timer = 0;
-                Debug.Log(currentAmunicionCount);
+                
             }
         }
         if(Input.GetKeyUp(KeyCode.W))

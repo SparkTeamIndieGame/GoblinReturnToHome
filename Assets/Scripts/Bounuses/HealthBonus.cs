@@ -10,5 +10,6 @@ public class HealthBonus : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         _playerController.AddHealth(_addHealth);
+        Destroy(this.gameObject);
     }
 }

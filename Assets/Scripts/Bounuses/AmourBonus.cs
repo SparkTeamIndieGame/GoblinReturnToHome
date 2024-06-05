@@ -12,7 +12,8 @@ public class AmourBonus : MonoBehaviour
     {
         if (_isWeaponBonus)
         {
-            if (_weapon.gameObject.activeInHierarchy == false)
+            
+            if (_weapon.gameObject.activeSelf == false)
             {
                 for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
                 {
@@ -29,6 +30,7 @@ public class AmourBonus : MonoBehaviour
         {
             _weapon.AddAmunicion(_amuniceAdd);
         }
+        Destroy(this.gameObject);
         
     }
 }

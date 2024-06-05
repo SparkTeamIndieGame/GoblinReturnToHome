@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4122338466551247637}
   - component: {fileID: 3463490322637171214}
   - component: {fileID: 2153139536814213046}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 7598223298515037377}
   - component: {fileID: 4565037302231495408}
   - component: {fileID: -5184144507737956609}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: BonusGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 0}
-  _amuniceAdd: 0
-  _isWeaponBonus: 0
+  _amuniceAdd: 10
+  _isWeaponBonus: 1
 --- !u!1 &6168607338701990759
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 2588702341263693392}
   - component: {fileID: 6213634350051470145}
   - component: {fileID: 933220197276566467}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cutter.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 3768087938207770769}
   - component: {fileID: 8138850527753568851}
   - component: {fileID: 3978230114419120396}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198643516786956194}
   - component: {fileID: 8251790122633722236}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
