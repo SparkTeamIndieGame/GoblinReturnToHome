@@ -12,6 +12,7 @@ public class RodActive : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        print("gopa");
         if (_wasUsed == false)
         {
             _helperUI.SetActive(true);
