@@ -48,9 +48,9 @@ public class Tight : MonoBehaviour
     private void RotationForward()
     {
         if (transform.localPosition.x > 0)
-            _xEuler = 0;
+            _xEuler = -90;
         else if (transform.localPosition.x < 0)
-            _xEuler = -180;
+            _xEuler = 90;
 
         _playerSkin.localRotation = Quaternion.Lerp(_playerSkin.localRotation, Quaternion.Euler(0, _xEuler, 0), _smoothRotation * Time.deltaTime);
     }

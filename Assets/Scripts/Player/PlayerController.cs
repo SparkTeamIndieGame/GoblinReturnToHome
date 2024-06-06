@@ -4,13 +4,14 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public event Action Damage;
     public float Health;
+    private float maxHealth;
 
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
     [SerializeField] private float _jumpPower;
     [SerializeField] private float _maxJumpCount;
-    [SerializeField] private GameObject _reboot;
 
     private CharacterController _characterController;
 
@@ -27,21 +28,23 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        maxHealth = Health;
     }
 
     // Update is called once per frame
     void Update()
     {
+        print(Health);
         Gravity();
         MoveForward();
         BlockTransformZ();
         //RotationForward();
-        if(Health <= 0)
-        {
-            print("Убтли су**");
-            _reboot.SetActive(true);
-            Destroy(gameObject);
-        }
+        //if(Health <= 0)
+        //{
+        //    print("Убтли су**");
+        //    //_reboot.SetActive(true);
+        //    Destroy(gameObject);
+        //}
     }
 
 
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.TryGetComponent(out BulletCharacter damage))
         {
             Health -= damage._damage;
-            print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {Health}, ");
+            Damage?.Invoke();
         }
     }
 
@@ -110,5 +113,18 @@ public class PlayerController : MonoBehaviour
         _blockZ.y = transform.position.y;
         transform.position = _blockZ;
     }
+    //Для бонуса здоровья!
+    public void AddHealth(float value)
+    {
+        if ((Health += value) > maxHealth)
+        {
+            Health = maxHealth;
+        }
+        else
+        {
+            Health += value;
+        }
+    }
+    
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1512118276238523709}
   - component: {fileID: 5932061372324698160}
   - component: {fileID: 7592566667840018812}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,8 @@ GameObject:
   - component: {fileID: 4948685393803943478}
   - component: {fileID: 4960143025387430279}
   - component: {fileID: 4420867575005549695}
-  m_Layer: 10
+  - component: {fileID: -7616153009773582850}
+  m_Layer: 13
   m_Name: BonusShootGunBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +134,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -153,6 +154,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _insideObject: {fileID: 7128643500260625968}
   _rotationSpeed: 80
+--- !u!114 &-7616153009773582850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3644095239430833942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db8ba7ffec73b848bc1d738ecb3b498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 0}
+  _amuniceAdd: 0
+  _isWeaponBonus: 0
 --- !u!1 &7118096215666580867
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +180,7 @@ GameObject:
   - component: {fileID: 7475474584139475182}
   - component: {fileID: 3056329676538873566}
   - component: {fileID: 4923189929668189804}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -245,7 +261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9177596382301063411}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShootGubBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5326844974635686975}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: gunshotbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +328,7 @@ GameObject:
   - component: {fileID: 8618914510309983960}
   - component: {fileID: 997329368917569403}
   - component: {fileID: 5522301071616758588}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
