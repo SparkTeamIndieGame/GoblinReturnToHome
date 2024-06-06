@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 511503494413754425}
   - component: {fileID: 3762364143128662333}
   - component: {fileID: 7615161609978984618}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4405530817590654296}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: ShootGunSkin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 1262725220193339099}
   - component: {fileID: 6347524950444824986}
   - component: {fileID: 5601271077475265815}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: BonusShotGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weapon: {fileID: 0}
-  _amuniceAdd: 0
-  _isWeaponBonus: 0
+  _amuniceAdd: 9
+  _isWeaponBonus: 1
 --- !u!1 &8787883240137919489
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,7 +212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3522257550721177459}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: shootgun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 5728970442384445069}
   - component: {fileID: 5174553416385148185}
   - component: {fileID: 3368518477694926947}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
