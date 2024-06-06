@@ -28,7 +28,12 @@ public class AmourBonus : MonoBehaviour
         }
         else if (!_isWeaponBonus)
         {
-            _weapon.AddAmunicion(_amuniceAdd);
+            if (_weapon.gameObject.activeSelf == true)
+            {
+                _weapon.AddAmunicion(_amuniceAdd);
+            }
+            
+            
         }
         Destroy(this.gameObject);
         

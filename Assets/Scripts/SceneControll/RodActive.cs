@@ -35,6 +35,10 @@ public class RodActive : MonoBehaviour
         {
             _animator.SetTrigger("ChangeRodState");
             _wasUsed = true;
+            if (_helperUI.gameObject.activeSelf == true)
+            {
+                _helperUI.SetActive(false);
+            }
         }
     }
 }

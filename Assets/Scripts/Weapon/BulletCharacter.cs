@@ -13,9 +13,8 @@ public class BulletCharacter : MonoBehaviour
         Destroy(this.gameObject, _lifeTime);
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Enemy")
-    //        Destroy(gameObject);
-    //}
+    private void OnCollisionEnter(Collision collision)
+    {
+        Destroy(this.gameObject);
+    }
 }

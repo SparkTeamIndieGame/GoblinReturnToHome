@@ -85,7 +85,7 @@ public abstract class WeaponBase : MonoBehaviour
     {
         if (GetActualScore() > int.MaxValue)
         {
-            ActualAmunitionScore.transform.rotation = Quaternion.Euler(0.0f, 0.0f, -17.0f);
+            ActualAmunitionScore.transform.rotation = Quaternion.Euler(0.0f, 0.0f, -70.0f);
             ActualAmunitionScore.text = "8";
         }
         else
