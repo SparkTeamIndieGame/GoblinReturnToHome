@@ -6,6 +6,7 @@ public class AnimPlayer : MonoBehaviour
 {
     [SerializeField] private float _delay;
     [SerializeField] private GameObject _reboot;
+    [SerializeField] private SkinnedMeshRenderer _meshRender;
 
     private Animator _animator;
     private PlayerController _player;
@@ -13,12 +14,17 @@ public class AnimPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.Damage += DamageAnim;
+        _player.DamageBullet += Damage;
+        EnemyBomb.DamageBomb += Damage;
+        EnemyHook.DamageHit  += Damage;
     }
 
     private void OnDisable()
     {
-        _player.Damage -= DamageAnim;
+        _player.DamageBullet -= Damage;
+        EnemyBomb.DamageBomb -= Damage;
+        EnemyHook.DamageHit  -= Damage;
+
     }
     private void Awake()
     {
@@ -55,6 +61,13 @@ public class AnimPlayer : MonoBehaviour
     private void DamageAnim()
     {
         _animator.SetTrigger("Damage");
+        StartCoroutine("HitMaterial");
+    }
+
+    private void Damage(float damage)
+    {
+        DamageAnim();
+        _player.Health -= damage;
     }
 
     private void DeadAnim()
@@ -69,6 +82,14 @@ public class AnimPlayer : MonoBehaviour
         yield return new WaitForSeconds(_delay);
         _reboot.SetActive(true);
         Destroy(transform.parent.gameObject);
+    }
+
+    IEnumerator HitMaterial()
+    {
+        _meshRender.materials[0].color = new Color32(255, 0, 0, 255);
+        yield return new WaitForSeconds(0.5f);
+        _meshRender.materials[0].color = new Color32(150, 150, 150, 255);
+
     }
 
 

@@ -5,7 +5,7 @@ public class EnemyBase : MonoBehaviour
     [SerializeField] protected float _health;
     [SerializeField] protected  float _radius;
     [SerializeField] private float _speedEyes, _speedHand, _smoothRotation;
-    [SerializeField] private Transform _pivotEyes, _pivotHand, _skin;
+    [SerializeField] protected Transform _pivotEyes, _pivotHand, _skin;
 
     protected  Transform _playerTransform;
     private Vector3 _blockZ;

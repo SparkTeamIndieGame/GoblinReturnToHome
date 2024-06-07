@@ -4,7 +4,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public event Action Damage;
+    public event Action<float> DamageBullet;
     public float Health;
     private float maxHealth;
 
@@ -83,8 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BulletCharacter damage))
         {
-            Health -= damage._damage;
-            Damage?.Invoke();
+            DamageBullet?.Invoke(damage._damage);
         }
     }
 
