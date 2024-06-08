@@ -7,6 +7,7 @@ public class AmourBonus : MonoBehaviour
     [SerializeField] private WeaponBase _weapon;
     [SerializeField] private float _amuniceAdd;
     [SerializeField] private bool _isWeaponBonus;
+    [SerializeField] private ParticleSystem _effect;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -35,6 +36,9 @@ public class AmourBonus : MonoBehaviour
             
             
         }
+
+        Instantiate(_effect, transform.position, Quaternion.identity);
+
         Destroy(this.gameObject);
         
     }

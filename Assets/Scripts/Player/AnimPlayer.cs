@@ -7,6 +7,7 @@ public class AnimPlayer : MonoBehaviour
     [SerializeField] private float _delay;
     [SerializeField] private GameObject _reboot;
     [SerializeField] private SkinnedMeshRenderer _meshRender;
+    [SerializeField] private ParticleSystem _walk, _jump;
 
     private Animator _animator;
     private PlayerController _player;
@@ -46,16 +47,27 @@ public class AnimPlayer : MonoBehaviour
 
     private void Move(float input)
     {
-        if (input > 0 || input < 0)
+        if ((input > 0 || input < 0) && _player.gameObject.GetComponent<CharacterController>().isGrounded)
+        {
             _animator.SetBool("Run", true);
+            _walk.Play();
+        }
+
         else
+        {
             _animator.SetBool("Run", false);
+            _walk.Stop();
+        }
+
     }
 
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             _animator.SetTrigger("Jump");
+            _jump.Play();
+        }
     }
 
     private void DamageAnim()
