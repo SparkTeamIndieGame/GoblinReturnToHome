@@ -4,7 +4,9 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    
     public float Health;
+    private float maxHealth = 100;
 
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Health);
         Gravity();
         MoveForward();
         BlockTransformZ();
@@ -110,5 +113,18 @@ public class PlayerController : MonoBehaviour
         _blockZ.y = transform.position.y;
         transform.position = _blockZ;
     }
+    //Для бонуса здоровья!
+    public void AddHealth(float value)
+    {
+        if ((Health += value) > maxHealth)
+        {
+            Health = maxHealth;
+        }
+        else
+        {
+            Health += value;
+        }
+    }
+    
 
 }

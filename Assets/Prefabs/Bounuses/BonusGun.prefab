@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4122338466551247637}
   - component: {fileID: 3463490322637171214}
   - component: {fileID: 2153139536814213046}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,8 @@ GameObject:
   - component: {fileID: 7990148711979213611}
   - component: {fileID: 7598223298515037377}
   - component: {fileID: 4565037302231495408}
-  m_Layer: 10
+  - component: {fileID: -5184144507737956609}
+  m_Layer: 13
   m_Name: BonusGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +136,7 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -155,6 +156,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _insideObject: {fileID: 9117929059028084008}
   _rotationSpeed: 10
+--- !u!114 &-5184144507737956609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754590157460719810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4db8ba7ffec73b848bc1d738ecb3b498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 0}
+  _amuniceAdd: 10
+  _isWeaponBonus: 1
 --- !u!1 &6168607338701990759
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,7 +182,7 @@ GameObject:
   - component: {fileID: 2588702341263693392}
   - component: {fileID: 6213634350051470145}
   - component: {fileID: 933220197276566467}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Cutter.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +265,7 @@ GameObject:
   - component: {fileID: 3768087938207770769}
   - component: {fileID: 8138850527753568851}
   - component: {fileID: 3978230114419120396}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -331,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 198643516786956194}
   - component: {fileID: 8251790122633722236}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
