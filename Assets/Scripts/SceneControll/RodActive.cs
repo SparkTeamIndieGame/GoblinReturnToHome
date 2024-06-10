@@ -12,6 +12,7 @@ public class RodActive : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
+        print("gopa");
         if (_wasUsed == false)
         {
             _helperUI.SetActive(true);
@@ -34,6 +35,10 @@ public class RodActive : MonoBehaviour
         {
             _animator.SetTrigger("ChangeRodState");
             _wasUsed = true;
+            if (_helperUI.gameObject.activeSelf == true)
+            {
+                _helperUI.SetActive(false);
+            }
         }
     }
 }

@@ -1,11 +1,18 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CusrorChange : MonoBehaviour
 {
     public Texture2D cursorTexture;
+    private Vector2 _hotSpot;
 
     void Start()
     {
-        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        if (SceneManager.GetActiveScene().buildIndex != 0)
+            _hotSpot = new Vector2(31, 32);
+        else
+            _hotSpot = Vector2.zero;
+
+            Cursor.SetCursor(cursorTexture, _hotSpot, CursorMode.Auto);
     }
 }

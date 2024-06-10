@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7416921097060959314}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: acornbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 195760500775117542}
   - component: {fileID: 7210074654837788680}
   - component: {fileID: 1130204460554543187}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u041A\u0443\u0431"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 6118363655587271334}
   - component: {fileID: 299907299374324986}
   - component: {fileID: 1422719798246165652}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: "\u041A\u0443\u0431.001"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 4027266822035253518}
   - component: {fileID: 2113901423272190381}
   - component: {fileID: 8578648351589692000}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 6635690883181249671}
   - component: {fileID: 4630519201629563972}
   - component: {fileID: 9010171664068084845}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: SlingshotBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -378,5 +378,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5835f09b246bdcf43890c1aa35b9a9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 1
-  _lifeTime: 5
+  _damage: 0.5
+  _lifeTime: 0.8
+  _blood: {fileID: 4305971748266685218, guid: dfc1f120ba30347769165e8c1da445a8, type: 3}

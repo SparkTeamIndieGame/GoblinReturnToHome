@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1388806026531978406}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: gunshotbullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 726218766972997231}
   - component: {fileID: 5160518793158779166}
   - component: {fileID: 3411515610197737677}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 4498203553068516543}
   - component: {fileID: 7118766848408684340}
   - component: {fileID: 1057350905519481629}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GunshootBulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,8 +211,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5835f09b246bdcf43890c1aa35b9a9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 5
-  _lifeTime: 5
+  _damage: 3
+  _lifeTime: 0.5
+  _blood: {fileID: 4305971748266685218, guid: dfc1f120ba30347769165e8c1da445a8, type: 3}
 --- !u!1 &7193526524944845377
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +225,7 @@ GameObject:
   - component: {fileID: 1367382583678862122}
   - component: {fileID: 4799431547336885865}
   - component: {fileID: 3000226808839217477}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

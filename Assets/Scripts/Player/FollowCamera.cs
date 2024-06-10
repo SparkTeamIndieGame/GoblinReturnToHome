@@ -22,7 +22,7 @@ public class FollowCamera : MonoBehaviour
 
     private void Update()
     {
-        _direction = Input.GetAxis("Horizontal");
+        _direction = _tight.localPosition.x;
 
         if (_direction > 0)
             _forward = true;

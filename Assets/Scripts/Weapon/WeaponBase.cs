@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public abstract class WeaponBase : MonoBehaviour
 {
     public static event Action OnWeaponChange;
+
     public Sprite WeaponSprite;
     public Image WeaponImage;
     public Text ActualAmunitionScore;
@@ -19,6 +20,8 @@ public abstract class WeaponBase : MonoBehaviour
 
     private float timer;
     readonly protected float MaxPlayerSpeed = 10.0f;
+
+    [SerializeField] protected ParticleSystem[] _effect;
 
     private void Start()
     {
@@ -52,6 +55,7 @@ public abstract class WeaponBase : MonoBehaviour
     {
         GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
         newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed);
+        _effect[0].Play();
         RemoveAmunicion();
         ChekingAmunicion();
     }
@@ -85,7 +89,7 @@ public abstract class WeaponBase : MonoBehaviour
     {
         if (GetActualScore() > int.MaxValue)
         {
-            ActualAmunitionScore.transform.rotation = Quaternion.EulerAngles(0.0f, 0.0f, -17.0f);
+            ActualAmunitionScore.transform.rotation = Quaternion.Euler(0.0f, 0.0f, -70.0f);
             ActualAmunitionScore.text = "8";
         }
         else

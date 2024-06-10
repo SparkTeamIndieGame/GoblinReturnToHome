@@ -1,8 +1,10 @@
 using UnityEngine;
+using System;
 
 [RequireComponent(typeof(CharacterController))]
 public class EnemyHook : EnemyBase
 {
+    public static event Action<float> DamageHit;
     [SerializeField] protected float _offsetDistance;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _damage;
@@ -25,7 +27,7 @@ public class EnemyHook : EnemyBase
             _targetPlayerX = Vector3.zero;
 
         Pursuit();
-        
+        Animation();
 
     }
 
@@ -39,22 +41,16 @@ public class EnemyHook : EnemyBase
         if(_distance < _offsetDistance)
         {
             _targetPlayerX = Vector3.zero;
-            Animator.SetBool("Attack", true);
-            Animator.SetBool("Run", false);
 
         }
        else if (_distance > _radius)
         {
             _targetPlayerX = Vector3.zero;
-            Animator.SetBool("Attack", false);
-            Animator.SetBool("Run", false);
         }
 
         else if (_distance < _radius)
         {
             _targetPlayerX = new Vector3(_playerTransform.position.x - transform.position.x, 0, 0);
-            Animator.SetBool("Run", true);
-            Animator.SetBool("Attack", false);
 
         }
     }
@@ -63,11 +59,33 @@ public class EnemyHook : EnemyBase
     {
         if(_distance < _offsetDistance)
         {
-            _playerTransform.gameObject.GetComponent<PlayerController>().Health -= _damage;
+            DamageHit?.Invoke(_damage);
             print($"{name} ударил игрока, урон составил {_damage} и у игрорка осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}");
 
         }
 
     }
 
+    public virtual void Animation()
+    {
+        if (_distance < _offsetDistance)
+        {
+            Animator.SetBool("Attack", true);
+            Animator.SetBool("Run", false);
+
+        }
+        else if (_distance > _radius)
+        {
+            Animator.SetBool("Attack", false);
+            Animator.SetBool("Run", false);
+        }
+
+        else if (_distance < _radius)
+        {
+            Animator.SetBool("Run", true);
+            Animator.SetBool("Attack", false);
+
+        }
+    }
 }
+
