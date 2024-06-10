@@ -1,8 +1,13 @@
 using UnityEngine;
 using UnityEditor;
+using System;
 
 public class EnemyBase : MonoBehaviour
 {
+    //счетчик
+    public static event Action<float> OnChangeDamage;
+    public static event Action OnChangeKill;
+
     [SerializeField] protected float _health;
     [SerializeField] protected  float _radius;
     [SerializeField] private float _speedEyes, _speedHand, _smoothRotation;
@@ -80,6 +85,8 @@ public class EnemyBase : MonoBehaviour
             var healthProcent = (_health / maxHealth) * 100.0f; //нашли процент остаточного здоровья
             var healthBarProcent = healthProcent / 100.0f;
             _healhBarFront.transform.localScale = new Vector3(healthBarProcent,1.0f,1.0f);
+
+            OnChangeDamage?.Invoke(damage._damage);  //счетчик
             print(healthProcent);
             print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {_health}, ");
         }
@@ -96,9 +103,11 @@ public class EnemyBase : MonoBehaviour
     {
         print($"{name} умер");
         Destroy(gameObject);
+        OnChangeKill?.Invoke(); //счетчик
     }
-#if UNITY_EDITOR
     
+#if UNITY_EDITOR
+
     public virtual void OnDrawGizmos()
     {
         Handles.DrawWireDisc(this.transform.position, Vector3.forward, _radius);
