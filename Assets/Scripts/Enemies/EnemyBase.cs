@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 public class EnemyBase : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class EnemyBase : MonoBehaviour
     protected  float _distance;
     private float _xEuler = -90;
 
+    //HealthBar
+    [SerializeField] protected GameObject _healhBarFront;
+    private float maxHealth;
     // Start is called before the first frame update
 
     public virtual void Awake()
     {
+        maxHealth = _health;
         _playerTransform = FindFirstObjectByType<PlayerController>().transform;
     }
 
@@ -72,6 +77,10 @@ public class EnemyBase : MonoBehaviour
         if(collision.gameObject.TryGetComponent(out BulletCharacter damage))
         {
             _health -= damage._damage;
+            var healthProcent = (_health / maxHealth) * 100.0f; //нашли процент остаточного здоровья
+            var healthBarProcent = healthProcent / 100.0f;
+            _healhBarFront.transform.localScale = new Vector3(healthBarProcent,1.0f,1.0f);
+            print(healthProcent);
             print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {_health}, ");
         }
     }
@@ -88,6 +97,12 @@ public class EnemyBase : MonoBehaviour
         print($"{name} умер");
         Destroy(gameObject);
     }
-
+#if UNITY_EDITOR
+    
+    public virtual void OnDrawGizmos()
+    {
+        Handles.DrawWireDisc(this.transform.position, Vector3.forward, _radius);
+    }
+#endif
 
 }

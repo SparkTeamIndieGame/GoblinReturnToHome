@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEditor;
 
 public class EnemyBomb : EnemyHook
 {
@@ -56,6 +57,7 @@ public class EnemyBomb : EnemyHook
         }
 
     }
+    
 
     IEnumerator BombActive()
     {
@@ -63,6 +65,7 @@ public class EnemyBomb : EnemyHook
        
         yield return new WaitForSeconds(_delayBomb);
         _skin.gameObject.SetActive(false);
+        _healhBarFront.SetActive(false);
         _speed = 0;
         _bang.Play();
         yield return new WaitForSeconds(Time.fixedDeltaTime);

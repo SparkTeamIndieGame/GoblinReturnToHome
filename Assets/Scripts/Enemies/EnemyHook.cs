@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 using System;
 
 [RequireComponent(typeof(CharacterController))]
@@ -87,5 +88,17 @@ public class EnemyHook : EnemyBase
 
         }
     }
+#if UNITY_EDITOR
+    public override void OnDrawGizmos()
+    {
+        Handles.color = Color.yellow;
+        base.OnDrawGizmos();
+        Handles.color = Color.red;
+        Handles.DrawWireDisc(this.transform.position, Vector3.forward, _offsetDistance);
+        
+    }
+    
+
+#endif
 }
 
