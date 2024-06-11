@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEditor;
 
 public class Enemy : EnemyBase
 {
@@ -48,6 +49,11 @@ public class Enemy : EnemyBase
     private void Timer()
     {
         timer += Time.deltaTime;
+    }
+    public override void OnDrawGizmos()
+    {
+        Handles.color = Color.red;
+        base.OnDrawGizmos();
     }
 
 }

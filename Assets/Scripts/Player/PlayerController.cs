@@ -4,9 +4,9 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public event Action Damage;
+    public event Action<float> DamageBullet;
     public float Health;
-    private float maxHealth;
+    public float maxHealth;
 
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
@@ -28,13 +28,13 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        maxHealth = Health;
+        //maxHealth = Health;
     }
 
     // Update is called once per frame
     void Update()
     {
-        print(Health);
+//        print(Health);
         Gravity();
         MoveForward();
         BlockTransformZ();
@@ -83,8 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent(out BulletCharacter damage))
         {
-            Health -= damage._damage;
-            Damage?.Invoke();
+            DamageBullet?.Invoke(damage._damage);
         }
     }
 
@@ -105,6 +104,7 @@ public class PlayerController : MonoBehaviour
        
         _jumpCount++;
         _velocity = _jumpPower;
+        AudioSystem.insance._player_jump.Play();
     }
 
     private void BlockTransformZ()

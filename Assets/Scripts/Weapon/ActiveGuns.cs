@@ -8,6 +8,11 @@ public class ActiveGuns : MonoBehaviour
     public static List<WeaponBase> weaponBases = new List<WeaponBase>();
     private void Start()
     {
+        if (weaponBases.Count > 0)
+        {
+            weaponBases.Clear();
+        }
+
         for (int i = 0; i < _weaponsLink.Length; i++)
         {
             weaponBases.Add(_weaponsLink[i]);

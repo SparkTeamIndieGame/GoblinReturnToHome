@@ -6,6 +6,8 @@ public class AnimPlayer : MonoBehaviour
 {
     [SerializeField] private float _delay;
     [SerializeField] private GameObject _reboot;
+    [SerializeField] private SkinnedMeshRenderer _meshRender;
+    [SerializeField] private ParticleSystem _walk, _jump;
 
     private Animator _animator;
     private PlayerController _player;
@@ -13,12 +15,17 @@ public class AnimPlayer : MonoBehaviour
 
     private void OnEnable()
     {
-        _player.Damage += DamageAnim;
+        _player.DamageBullet += Damage;
+        EnemyBomb.DamageBomb += Damage;
+        EnemyHook.DamageHit  += Damage;
     }
 
     private void OnDisable()
     {
-        _player.Damage -= DamageAnim;
+        _player.DamageBullet -= Damage;
+        EnemyBomb.DamageBomb -= Damage;
+        EnemyHook.DamageHit  -= Damage;
+
     }
     private void Awake()
     {
@@ -40,22 +47,46 @@ public class AnimPlayer : MonoBehaviour
 
     private void Move(float input)
     {
-        if (input > 0 || input < 0)
+        if ((input > 0 || input < 0) && _player.gameObject.GetComponent<CharacterController>().isGrounded)
+        {
             _animator.SetBool("Run", true);
+            AudioSystem.insance._player_walk.mute = false;
+            _walk.Play();
+        }
+
         else
+        {
             _animator.SetBool("Run", false);
+            AudioSystem.insance._player_walk.mute = true;
+            _walk.Stop();
+        }
+
     }
 
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
             _animator.SetTrigger("Jump");
+            _jump.Play();
+
+
+        }
+    }
+
+    private void Damage(float damage)
+    {
+        _player.Health -= damage;
+        AudioSystem.insance._player_damage.Play();
+        DamageAnim();
     }
 
     private void DamageAnim()
     {
         _animator.SetTrigger("Damage");
+        StartCoroutine("HitMaterial");
     }
+
 
     private void DeadAnim()
     {
@@ -64,11 +95,25 @@ public class AnimPlayer : MonoBehaviour
 
     }
 
+    public void SoundDead()
+    {
+        AudioSystem.insance._player_dead.Play();
+        AudioSystem.insance._player_damage.mute = true;
+    }
+
     IEnumerator Dead()
     {
         yield return new WaitForSeconds(_delay);
-        _reboot.SetActive(true);
+        //_reboot.SetActive(true);
         Destroy(transform.parent.gameObject);
+    }
+
+    IEnumerator HitMaterial()
+    {
+        _meshRender.materials[0].color = new Color32(255, 0, 0, 255);
+        yield return new WaitForSeconds(0.5f);
+        _meshRender.materials[0].color = new Color32(150, 150, 150, 255);
+
     }
 
 

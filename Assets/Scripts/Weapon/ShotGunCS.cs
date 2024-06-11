@@ -12,6 +12,8 @@ public class ShotGunCS : WeaponBase
         {
             GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[i].position, SpawnPoint[0].rotation);
             newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[i].forward * (BulletSpeed + MaxPlayerSpeed);
+            _effect[i].Play();
+            _soundShoot.Play();
             RemoveAmunicion();
             
         }
