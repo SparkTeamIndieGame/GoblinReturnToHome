@@ -39,7 +39,5 @@ public class AudioSystem : MonoBehaviour
             insance = this;
         else if (insance == this)
             Destroy(gameObject);
-
-        DontDestroyOnLoad(gameObject);
     }
 }
