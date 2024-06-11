@@ -1,0 +1,4 @@
+public class GunCS : WeaponBase
+{
+    
+}
