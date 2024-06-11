@@ -10,6 +10,7 @@ public class HealthBonus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        AudioSystem.insance._HP.Play();
         _playerController.AddHealth(_addHealth);
 
         Instantiate(_effect, transform.position, Quaternion.identity);

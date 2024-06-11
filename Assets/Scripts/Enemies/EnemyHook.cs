@@ -61,6 +61,7 @@ public class EnemyHook : EnemyBase
         if(_distance < _offsetDistance)
         {
             DamageHit?.Invoke(_damage);
+            AudioSystem.insance._enemy_attack.Play();
             print($"{name} ударил игрока, урон составил {_damage} и у игрорка осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}");
 
         }

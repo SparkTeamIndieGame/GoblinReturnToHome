@@ -22,6 +22,7 @@ public abstract class WeaponBase : MonoBehaviour
     readonly protected float MaxPlayerSpeed = 10.0f;
 
     [SerializeField] protected ParticleSystem[] _effect;
+    [SerializeField] protected AudioSource _soundShoot;
 
     private void Start()
     {
@@ -56,6 +57,7 @@ public abstract class WeaponBase : MonoBehaviour
         GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
         newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed);
         _effect[0].Play();
+        _soundShoot.Play();
         RemoveAmunicion();
         ChekingAmunicion();
     }
