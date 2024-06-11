@@ -89,6 +89,8 @@ public class EnemyBase : MonoBehaviour
             OnChangeDamage?.Invoke(damage._damage);  //счетчик
             print(healthProcent);
             print($"{name}, получил урон в {damage._damage} едениц пулей {damage.gameObject.name}, у него осталось {_health}, ");
+
+            AudioSystem.insance._enemy_damage.Play();
         }
     }
 

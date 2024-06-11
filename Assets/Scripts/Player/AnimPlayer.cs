@@ -50,12 +50,14 @@ public class AnimPlayer : MonoBehaviour
         if ((input > 0 || input < 0) && _player.gameObject.GetComponent<CharacterController>().isGrounded)
         {
             _animator.SetBool("Run", true);
+            AudioSystem.insance._player_walk.mute = false;
             _walk.Play();
         }
 
         else
         {
             _animator.SetBool("Run", false);
+            AudioSystem.insance._player_walk.mute = true;
             _walk.Stop();
         }
 
@@ -67,7 +69,16 @@ public class AnimPlayer : MonoBehaviour
         {
             _animator.SetTrigger("Jump");
             _jump.Play();
+
+
         }
+    }
+
+    private void Damage(float damage)
+    {
+        _player.Health -= damage;
+        AudioSystem.insance._player_damage.Play();
+        DamageAnim();
     }
 
     private void DamageAnim()
@@ -76,11 +87,6 @@ public class AnimPlayer : MonoBehaviour
         StartCoroutine("HitMaterial");
     }
 
-    private void Damage(float damage)
-    {
-        DamageAnim();
-        _player.Health -= damage;
-    }
 
     private void DeadAnim()
     {
@@ -89,10 +95,16 @@ public class AnimPlayer : MonoBehaviour
 
     }
 
+    public void SoundDead()
+    {
+        AudioSystem.insance._player_dead.Play();
+        AudioSystem.insance._player_damage.mute = true;
+    }
+
     IEnumerator Dead()
     {
         yield return new WaitForSeconds(_delay);
-        _reboot.SetActive(true);
+        //_reboot.SetActive(true);
         Destroy(transform.parent.gameObject);
     }
 

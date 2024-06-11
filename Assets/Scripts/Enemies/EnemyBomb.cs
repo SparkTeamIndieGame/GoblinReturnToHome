@@ -57,7 +57,10 @@ public class EnemyBomb : EnemyHook
         }
 
     }
-    
+    public void PlaySoundBomb()
+    {
+        AudioSystem.insance._enemy_bomb.Play();
+    }
 
     IEnumerator BombActive()
     {
