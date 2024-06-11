@@ -32,4 +32,12 @@ public class ScoreControl : MonoBehaviour
 
         _killScore.text = (templeKillScore + 1).ToString();
     }
+    public float GetKillScore()
+    {
+        return float.Parse(_killScore.text);
+    }
+    public float GetDamageScore()
+    {
+        return float.Parse(_damageScore.text);
+    }
 }

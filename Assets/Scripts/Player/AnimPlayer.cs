@@ -5,9 +5,10 @@ using UnityEngine;
 public class AnimPlayer : MonoBehaviour
 {
     [SerializeField] private float _delay;
-    [SerializeField] private GameObject _reboot;
+    [SerializeField] private GameObject _deathPanel;
     [SerializeField] private SkinnedMeshRenderer _meshRender;
     [SerializeField] private ParticleSystem _walk, _jump;
+
 
     private Animator _animator;
     private PlayerController _player;
@@ -92,8 +93,9 @@ public class AnimPlayer : MonoBehaviour
     IEnumerator Dead()
     {
         yield return new WaitForSeconds(_delay);
-        _reboot.SetActive(true);
+        _deathPanel.SetActive(true);
         Destroy(transform.parent.gameObject);
+        DeathPanel._isDeath = true;
     }
 
     IEnumerator HitMaterial()
