@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,11 +10,11 @@ public class HPPlayerUI : MonoBehaviour
 
     private void Start()
     {
-        _playerHp.maxValue = _player.Health;
+        _playerHp.maxValue = _player.maxHealth;
         _playerHp.value = _player.Health;
 
     }
-    private void Update()
+    private void Update() //надо переделать на событие
     {
         _playerHp.value = _player.Health;
     }

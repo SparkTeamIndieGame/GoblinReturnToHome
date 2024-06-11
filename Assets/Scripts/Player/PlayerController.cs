@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public event Action<float> DamageBullet;
     public float Health;
-    private float maxHealth;
+    public float maxHealth;
 
     [SerializeField] private float _speed; //_smoothRotation;
     [SerializeField] private float _gravityMultiplier;
@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        maxHealth = Health;
+        //maxHealth = Health;
     }
 
     // Update is called once per frame
