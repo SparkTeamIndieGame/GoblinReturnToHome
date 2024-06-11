@@ -31,6 +31,8 @@ public class AudioSystem : MonoBehaviour
     [Header("Scene")]
     public AudioSource _win;
     public AudioSource _background;
+    //public AudioSource _rod;
+    public AudioSource _door;
 
 
     private void Start()

@@ -10,5 +10,6 @@ public class FinishLvl : MonoBehaviour
     {
         _finishScene.SetActive(true);
         _inputSystem.SetActive(false);
+        AudioSystem.insance._win.Play();
     }
 }
