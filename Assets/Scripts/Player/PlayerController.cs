@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
        
         _jumpCount++;
         _velocity = _jumpPower;
+        AudioSystem.insance._player_jump.Play();
     }
 
     private void BlockTransformZ()

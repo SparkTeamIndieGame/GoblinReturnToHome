@@ -36,7 +36,7 @@ public class AmourBonus : MonoBehaviour
             
             
         }
-
+        AudioSystem.insance._gun.Play();
         Instantiate(_effect, transform.position, Quaternion.identity);
 
         Destroy(this.gameObject);
