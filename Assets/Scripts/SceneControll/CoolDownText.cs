@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,6 +20,8 @@ public class CoolDownText : MonoBehaviour
             _cooldownText.text = $"{i.ToString()} ...";
             yield return new WaitForSeconds(_coooldownTime);
         }
+        _cooldownText.text = "Погнали!";
+
         _buttonStGame.SetActive(true);
     }
 
