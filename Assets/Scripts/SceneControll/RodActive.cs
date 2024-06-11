@@ -29,6 +29,12 @@ public class RodActive : MonoBehaviour
         
         
     }
+
+    public void SoundActive()
+    {
+        AudioSystem.insance._door.Play();
+    }
+
     private void Update()
     {
        if (Input.GetKeyDown(KeyCode.E) && _active)
