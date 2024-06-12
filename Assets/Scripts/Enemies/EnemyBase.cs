@@ -9,7 +9,7 @@ public class EnemyBase : MonoBehaviour
     public static event Action OnChangeKill;
 
     [SerializeField] protected float _health;
-    [SerializeField] protected  float _radius;
+    [SerializeField] public float _radius;
     [SerializeField] private float _speedEyes, _speedHand, _smoothRotation;
     [SerializeField] protected Transform _pivotEyes, _pivotHand, _skin;
 
