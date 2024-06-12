@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39ed0fa9f89114e6aaf5b3613fb1c9f1
+guid: a2f0c9ebd28b84824aa44210755e8691
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,18 +108,62 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: fl3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 592
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bdb62259c2441cb9d7f9759cd2193a
+      internalID: -1854903187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fl3_1
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 523
+        width: 477
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfb91b09525564ee48e4ef7dc4e26577
+      internalID: 1633129618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: fea8b31deafe449cbacdb31c76d2f710
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fl3_0: -1854903187
+      fl3_1: 1633129618
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
