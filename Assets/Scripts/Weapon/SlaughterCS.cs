@@ -4,5 +4,26 @@ using UnityEngine;
 
 public class SlaughterCS : WeaponBase
 {
-    
+    public override void AddAmunicion(float value)
+    {
+        AmunitionCount.SlaughterCount += value;
+        UseActualAmourCount();
+    }
+    public override void RemoveAmunicion()
+    {
+        AmunitionCount.SlaughterCount -= 1;
+        UseActualAmourCount();
+    }
+    //public override void ChekingAmunicion()
+    //{
+    //    if (AmunitionCount.SlaughterCount <= 0)
+    //    {
+    //        //base.Event();
+    //        this.gameObject.SetActive(false);
+    //    }
+    //}
+    public override float GetActualScore()
+    {
+        return AmunitionCount.SlaughterCount;
+    }
 }

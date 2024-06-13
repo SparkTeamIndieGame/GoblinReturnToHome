@@ -9,7 +9,7 @@ public class EnemyBomb : EnemyHook
 
     [SerializeField] private float _delayBomb, _distanceBomb, _damageBomb;
     [SerializeField] private ParticleSystem _bang;
-    private bool _bomb;
+    private bool _bomb = true;
 
     public override void Update()
     {
@@ -71,11 +71,14 @@ public class EnemyBomb : EnemyHook
         _healhBarFront.SetActive(false);
         _speed = 0;
         _bang.Play();
-        yield return new WaitForSeconds(Time.fixedDeltaTime);
         if (_distance < _distanceBomb)
         {
-            DamageBomb?.Invoke(_damageBomb);
-            print($"{_playerTransform.gameObject.name}, получил урон в {_damageBomb} едениц взрывом, у него осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}, ");
+            if(_bomb)
+            {
+                DamageBomb?.Invoke(_damageBomb);
+                print($"{_playerTransform.gameObject.name}, получил урон в {_damageBomb} едениц взрывом, у него осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}, ");
+                _bomb = false;
+            }
         }
 
         yield return new WaitForSeconds(1.5f);

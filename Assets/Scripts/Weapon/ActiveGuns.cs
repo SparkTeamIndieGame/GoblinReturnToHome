@@ -30,13 +30,64 @@ public class ActiveGuns : MonoBehaviour
     {
         for (int i = _weaponsLink.Length-1; i >= 0; i--)
         {
-            if (_weaponsLink[i].GetActualScore() > 0)
+            switch (_weaponsLink[i].gameObject.name)
             {
-                _weaponsLink[i].gameObject.SetActive(true);
-                //_weaponsLink[i].UseActualWeaponSprite();
-                //_weaponsLink[i].UseActualAmourCount();
-                return;
+                case "Slaughter":
+                    {
+                        if (AmunitionCount.SlaughterCount > 0)
+                        {
+                            _weaponsLink[i].gameObject.SetActive(true);
+                            //_weaponsLink[i].UseActualWeaponSprite();
+                            //_weaponsLink[i].UseActualAmourCount();
+                            return;
+                        }
+                        break;
+                    }
+
+                case "Gun":
+                    {
+                        if (AmunitionCount.GunCount > 0)
+                        {
+                            _weaponsLink[i].gameObject.SetActive(true);
+                            //_weaponsLink[i].UseActualWeaponSprite();
+                            //_weaponsLink[i].UseActualAmourCount();
+                            return;
+                        }
+                        break;
+                    }
+
+                case "ShotGun":
+                    {
+                        if (AmunitionCount.ShotGunCount > 0)
+                        {
+                            _weaponsLink[i].gameObject.SetActive(true);
+                            //_weaponsLink[i].UseActualWeaponSprite();
+                            //_weaponsLink[i].UseActualAmourCount();
+                            return;
+                        }
+                        break;
+                    }
+
+                case "Machine":
+                    {
+                        if (AmunitionCount.MachineCount > 0)
+                        {
+                            _weaponsLink[i].gameObject.SetActive(true);
+                            //_weaponsLink[i].UseActualWeaponSprite();
+                            //_weaponsLink[i].UseActualAmourCount();
+                            return;
+                        }
+                        break;
+                    }
             }
+            //return;
+            //if (_weaponsLink[i].GetActualScore() > 0)
+            //{
+            //    _weaponsLink[i].gameObject.SetActive(true);
+            //    //_weaponsLink[i].UseActualWeaponSprite();
+            //    //_weaponsLink[i].UseActualAmourCount();
+            //    return;
+            //}
         }
     }
 }

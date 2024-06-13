@@ -4,6 +4,28 @@ using UnityEngine;
 
 public class ShotGunCS : WeaponBase
 {
+    public override void AddAmunicion(float value)
+    {
+        AmunitionCount.ShotGunCount += value;
+        UseActualAmourCount();
+    }
+    public override void RemoveAmunicion()
+    {
+        AmunitionCount.ShotGunCount -= 1;
+        UseActualAmourCount();
+    }
+    public override void ChekingAmunicion()
+    {
+        if (AmunitionCount.ShotGunCount <= 0)
+        {
+            base.Event();
+            this.gameObject.SetActive(false);
+        }
+    }
+    public override float GetActualScore()
+    {
+        return AmunitionCount.ShotGunCount;
+    }
 
     public override void Shoot()
     {
@@ -19,8 +41,8 @@ public class ShotGunCS : WeaponBase
         }
         ChekingAmunicion();
     }
-              
-    
-    
-     
+
+
+
+
 }

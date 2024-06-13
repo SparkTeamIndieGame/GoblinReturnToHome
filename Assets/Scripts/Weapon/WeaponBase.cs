@@ -26,15 +26,12 @@ public abstract class WeaponBase : MonoBehaviour
 
     private void Start()
     {
-        if (StartAmunicionCount == 0)
-        {
-            StartAmunicionCount = Mathf.Infinity;
-        }
-        currentAmunicionCount = StartAmunicionCount;
+        StartCountAmun();
         UseActualAmourCount();
     }
     private void Update()
     {
+
         //Debug.Log(currentAmunicionCount);
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
@@ -52,6 +49,37 @@ public abstract class WeaponBase : MonoBehaviour
         }
     }
 
+    public virtual void StartCountAmun()
+    {
+        switch (gameObject.name)
+        {
+            case "Slaughter":
+                {
+                    AmunitionCount.SlaughterCount = Mathf.Infinity;
+                    break;
+                }
+
+            case "Gun":
+                {
+                    AmunitionCount.GunCount = StartAmunicionCount;
+                    break;
+                }
+
+            case "ShotGun":
+                {
+                    AmunitionCount.ShotGunCount = StartAmunicionCount;
+                    break;
+                }
+
+            case "Machine":
+                {
+                    AmunitionCount.MachineCount = StartAmunicionCount;
+                    break;
+                }
+        }
+    }
+
+
     public virtual void Shoot()
     {
         GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
@@ -63,25 +91,26 @@ public abstract class WeaponBase : MonoBehaviour
     }
     public virtual void AddAmunicion(float value)
     {
-        currentAmunicionCount += value;
-        UseActualAmourCount();
+        //currentAmunicionCount += value;
+        //UseActualAmourCount();
     }
     public virtual void RemoveAmunicion()
     {
-        currentAmunicionCount -= 1;
-        UseActualAmourCount();
+        //currentAmunicionCount -= 1;
+        //UseActualAmourCount();
     }
     public virtual void ChekingAmunicion()
     {
-        if (currentAmunicionCount <= 0)
-        {
-            this.gameObject.SetActive(false);
-            OnWeaponChange?.Invoke();
-        }
+        //if (currentAmunicionCount <= 0)
+        //{
+        //    this.gameObject.SetActive(false);
+        //    OnWeaponChange?.Invoke();
+        //}
     }
     public virtual float GetActualScore()
     {
-        return currentAmunicionCount;
+         return currentAmunicionCount;
+        
     }
     public virtual void UseActualWeaponSprite()
     {
@@ -100,6 +129,12 @@ public abstract class WeaponBase : MonoBehaviour
             ActualAmunitionScore.text = GetActualScore().ToString();
         }
     }
+
+    public void Event()
+    {
+        OnWeaponChange?.Invoke();
+    }
+
     public virtual void OnEnable()
     {
         UseActualWeaponSprite();

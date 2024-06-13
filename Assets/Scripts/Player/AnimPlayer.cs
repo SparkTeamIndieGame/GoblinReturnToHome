@@ -18,6 +18,7 @@ public class AnimPlayer : MonoBehaviour
         _player.DamageBullet += Damage;
         EnemyBomb.DamageBomb += Damage;
         EnemyHook.DamageHit  += Damage;
+        BoxCrush.DamagePLayer += Damage;
     }
 
     private void OnDisable()
@@ -25,6 +26,8 @@ public class AnimPlayer : MonoBehaviour
         _player.DamageBullet -= Damage;
         EnemyBomb.DamageBomb -= Damage;
         EnemyHook.DamageHit  -= Damage;
+        BoxCrush.DamagePLayer -= Damage;
+
 
     }
     private void Awake()
