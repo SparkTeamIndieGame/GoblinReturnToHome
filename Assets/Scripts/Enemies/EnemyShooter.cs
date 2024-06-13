@@ -50,10 +50,11 @@ public class Enemy : EnemyBase
     {
         timer += Time.deltaTime;
     }
+#if UNITY_EDITOR
     public override void OnDrawGizmos()
     {
         Handles.color = Color.red;
         base.OnDrawGizmos();
     }
-
+#endif
 }
