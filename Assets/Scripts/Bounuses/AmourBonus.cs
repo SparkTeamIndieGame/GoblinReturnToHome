@@ -11,35 +11,43 @@ public class AmourBonus : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //if (_isWeaponBonus)
-        //{
-            
-            if (_weapon.gameObject.activeSelf == false)
-            {
-                for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
-                {
-                    ActiveGuns.weaponBases[i].gameObject.SetActive(false);
-                }
-                _weapon.gameObject.SetActive(true);
 
-            if(_weapon.GetActualScore() <= 0)
-                _weapon.AddAmunicion(_weapon.StartAmunicionCount);
-            }
-            else
-            {
-                _weapon.AddAmunicion(_amuniceAdd);
-            }
-        //}
-        //else if (!_isWeaponBonus)
+
+        //if (_weapon.gameObject.activeSelf == false)
         //{
-        //    //if (_weapon.gameObject.activeSelf == true)
-        //    //{
-        //    //    //_weapon.AddAmunicion(_amuniceAdd);
-        //    //}
-        //    AddAmunition(_amuniceAdd);
-            
-            
+        //    for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
+        //    {
+        //        ActiveGuns.weaponBases[i].gameObject.SetActive(false);
+        //    }
+        //    _weapon.gameObject.SetActive(true);
+
+        //if(_weapon.GetActualScore() <= 0)
+        //    _weapon.AddAmunicion(_weapon.StartAmunicionCount);
         //}
+        //else
+        //{
+        //    _weapon.AddAmunicion(_amuniceAdd);
+        //}
+        if (_weapon.gameObject.activeSelf == false)
+        {
+            for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
+            {
+                ActiveGuns.weaponBases[i].gameObject.SetActive(false);
+            }
+            _weapon.gameObject.SetActive(true);
+
+            if (_weapon.GetActualScore() <= 0)
+                _weapon.AddAmunicion(_amuniceAdd);
+        }
+        else
+        {
+            _weapon.AddAmunicion(_amuniceAdd);
+        }
+
+
+
+
+
         AudioSystem.insance._gun.Play();
         Instantiate(_effect, transform.position, Quaternion.identity);
 
