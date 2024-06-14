@@ -11,6 +11,7 @@ public class FollowCamera : MonoBehaviour
     private bool _forward = true;
     private float _direction;
     private Vector3 _currentVelocity = Vector3.zero;
+    private Vector3 _targetPosition;
 
     private void Awake()
     {
@@ -38,7 +39,11 @@ public class FollowCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        var targetPosition = _target.position + _offset;
-        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref _currentVelocity, _speed);
+        if (_target != null)
+        {
+           _targetPosition = _target.position + _offset;
+           transform.position = Vector3.SmoothDamp(transform.position, _targetPosition, ref _currentVelocity, _speed);
+        }
+
     }
 }

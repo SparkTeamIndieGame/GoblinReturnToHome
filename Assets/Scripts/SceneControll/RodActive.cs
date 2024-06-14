@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class RodActive : MonoBehaviour
 {
-    [SerializeField] private GameObject _helperUI;
-    [SerializeField] private Animator _animator;
-    private bool _active;
-    private bool _wasUsed = false;
+    [SerializeField] protected GameObject _helperUI;
+    [SerializeField] protected Animator _animator;
+    protected bool _active;
+    protected bool _wasUsed = false;
+
    public void ChangeRodState()
     {
         DoorOpen.isFlag = true;
     }
-    public void OnTriggerEnter(Collider other)
+    public virtual void OnTriggerEnter(Collider other)
     {
         print("gopa");
         if (_wasUsed == false)
@@ -20,7 +21,7 @@ public class RodActive : MonoBehaviour
         }
         
     }
-    private void OnTriggerExit(Collider other)
+    public virtual void OnTriggerExit(Collider other)
     {
         
         
@@ -35,7 +36,7 @@ public class RodActive : MonoBehaviour
         AudioSystem.insance._door.Play();
     }
 
-    private void Update()
+    public virtual void Update()
     {
        if (Input.GetKeyDown(KeyCode.E) && _active)
         {

@@ -26,13 +26,15 @@ public class EnemyBase : MonoBehaviour
     public virtual void Awake()
     {
         maxHealth = _health;
-        _playerTransform = FindFirstObjectByType<PlayerController>().transform;
+
+            _playerTransform = FindFirstObjectByType<PlayerController>().transform;
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        Monitoring();
+            Monitoring();
+
         BlockTransformZ();
 
         if (_health <= 0)

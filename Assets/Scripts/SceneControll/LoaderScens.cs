@@ -8,6 +8,23 @@ public class LoaderScens : MonoBehaviour
         SceneManager.LoadScene(countScene);
     }
 
+    public void Restart()
+    {
+        var NumberScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(NumberScene);
+    }
+
+    public void NextScene()
+    {
+        var NumberScene = SceneManager.GetActiveScene().buildIndex; 
+        SceneManager.LoadScene(NumberScene++);
+    }
+
+    public void LoadMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void ExitGame()
     {
         Application.Quit();

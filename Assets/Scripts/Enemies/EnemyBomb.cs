@@ -76,7 +76,7 @@ public class EnemyBomb : EnemyHook
             if(_bomb)
             {
                 DamageBomb?.Invoke(_damageBomb);
-                print($"{_playerTransform.gameObject.name}, получил урон в {_damageBomb} едениц взрывом, у него осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}, ");
+                //print($"{_playerTransform.gameObject.name}, получил урон в {_damageBomb} едениц взрывом, у него осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}, ");
                 _bomb = false;
             }
         }
