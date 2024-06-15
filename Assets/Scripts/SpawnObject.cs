@@ -81,18 +81,25 @@ public class SpawnObject : MonoBehaviour
 
     IEnumerator StartSpawn()
     {
-        while (true)
+        while (Spawn)
         {
-            while (Spawn && _gameObject.Count <= MaxItemInSceneOnTime)
+            yield return new WaitForSeconds(Daley);
+
+            if (_gameObject.Count < MaxItemInSceneOnTime)
             {
-                yield return new WaitForSeconds(Daley);
                 var random = UnityEngine.Random.Range(0, Point.Length);
                 GameObject @object = Instantiate(Object, Point[random].position, Quaternion.identity);
                 _gameObject.Add(@object);
 
             }
+            else
+            {
+                yield return new WaitForSeconds(1.0f);
+
+            }
+
         }
-        
+
 
     }
     private void RemoveFromList(GameObject gameObject)
