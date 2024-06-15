@@ -6,6 +6,7 @@ using UnityEngine;
 public class SpawnObject : MonoBehaviour
 {
     static public bool Spawn;
+    static public bool PressStart;
     [Header("Enemies:")]
     public bool IsEnemy;
     public float DistanceEnemy;
@@ -20,23 +21,28 @@ public class SpawnObject : MonoBehaviour
     public ParticleSystem ParticleSystem;
     [Header("Standart Static")]
     public GameObject Object;
-    public Transform[] Point;
+    public List<Transform> Point;
     public float Daley;
     public int MaxItemInSceneOnTime;
+
+    //[Header("CoolDownPanel")]
+    //[SerializeField] private GameObject _coolDownPanel;
     
 
     private List<GameObject> _gameObject = new List<GameObject>();
 
-    private void OnEnable()
-    {
-        Spawn = true;
-    }
+    
     // Start is called before the first frame update
     void Start()
     {
+        Spawn = true;
+        PressStart = false;
+
+        CreateArray();
+
         if (MaxItemInSceneOnTime == 0)
         {
-            MaxItemInSceneOnTime = Point.Length;
+            MaxItemInSceneOnTime = Point.Count;
 
         }
         if (IsEnemy)
@@ -78,28 +84,55 @@ public class SpawnObject : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void CreateArray()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Point.Add(transform.GetChild(i));
+        }
+    }
+
+    private void CheckNullArray()
+    {
+        for(int i = 0; i<_gameObject.Count; i++)
+        {
+            if (_gameObject[i] == null)
+                _gameObject.Remove(_gameObject[i]);
+
+        }
+
+
+    }
+
 
     IEnumerator StartSpawn()
     {
+
+        while(!PressStart)
+        yield return new WaitForSeconds(1);
+
+      
         while (Spawn)
         {
+
             yield return new WaitForSeconds(Daley);
 
             if (_gameObject.Count < MaxItemInSceneOnTime)
             {
-                var random = UnityEngine.Random.Range(0, Point.Length);
+                var random = UnityEngine.Random.Range(0, Point.Count);
                 GameObject @object = Instantiate(Object, Point[random].position, Quaternion.identity);
                 _gameObject.Add(@object);
 
             }
             else
             {
+                CheckNullArray();
                 yield return new WaitForSeconds(1.0f);
 
             }
-
         }
-
+     
+        
 
     }
     private void RemoveFromList(GameObject gameObject)

@@ -24,6 +24,12 @@ public class NeedCountEnemy : MonoBehaviour
         EnemyBase.OnChangeDamage += UpdateDamageText;
     }
 
+    private void OnDisable()
+    {
+        EnemyBase.OnChangeKill -= UpdateKillText;
+        EnemyBase.OnChangeDamage -= UpdateDamageText;
+    }
+
     private void Start()
     {
         _needEnemyText.text = _needEnemy.ToString();
