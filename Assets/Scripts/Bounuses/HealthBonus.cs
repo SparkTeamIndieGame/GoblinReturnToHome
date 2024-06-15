@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HealthBonus : MonoBehaviour
 {
+    public static event Action<GameObject> OnUseBossFigth;
+
     [SerializeField] private float _addHealth;
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private ParticleSystem _effect;
@@ -22,5 +25,6 @@ public class HealthBonus : MonoBehaviour
         Instantiate(_effect, transform.position, Quaternion.identity);
 
         Destroy(this.gameObject);
+        OnUseBossFigth?.Invoke(this.gameObject);
     }
 }

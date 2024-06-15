@@ -8,7 +8,6 @@ public class SpawnObject : MonoBehaviour
     static public bool Spawn;
     [Header("Enemies:")]
     public bool IsEnemy;
-    public float Daley;
     public float DistanceEnemy;
     [Header("Weapon:")]
     public bool IsWeapon;
@@ -22,6 +21,9 @@ public class SpawnObject : MonoBehaviour
     [Header("Standart Static")]
     public GameObject Object;
     public Transform[] Point;
+    public float Daley;
+    public int MaxItemInSceneOnTime;
+    
 
     private List<GameObject> _gameObject = new List<GameObject>();
 
@@ -32,16 +34,24 @@ public class SpawnObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (MaxItemInSceneOnTime == 0)
+        {
+            MaxItemInSceneOnTime = Point.Length;
+
+        }
         if (IsEnemy)
         {
+            EnemyBase.OnKillBossFigth += RemoveFromList;
             Object.GetComponent<EnemyBase>()._radius = DistanceEnemy;
         }
         else if (IsWeapon == true)
         {
+            AmourBonus.OnUsedBossFigth += RemoveFromList;
             Object.GetComponent<AmourBonus>().ConnectWeapon(Weapon, Amunicion);
         }
         else if (IsHealth == true)
         {
+            HealthBonus.OnUseBossFigth += RemoveFromList;
             Object.GetComponent<HealthBonus>().ConnectHealth(PlayerController, AddHealth, ParticleSystem);
         }
 
@@ -71,14 +81,22 @@ public class SpawnObject : MonoBehaviour
 
     IEnumerator StartSpawn()
     {
-        while(Spawn)
+        while (true)
         {
-            yield return new WaitForSeconds(Daley);
-            var random = UnityEngine.Random.Range(0, Point.Length);
-            GameObject @object = Instantiate(Object, Point[random].position, Quaternion.identity);
-            _gameObject.Add(@object);
+            while (Spawn && _gameObject.Count <= MaxItemInSceneOnTime)
+            {
+                yield return new WaitForSeconds(Daley);
+                var random = UnityEngine.Random.Range(0, Point.Length);
+                GameObject @object = Instantiate(Object, Point[random].position, Quaternion.identity);
+                _gameObject.Add(@object);
 
+            }
         }
+        
 
+    }
+    private void RemoveFromList(GameObject gameObject)
+    {
+        _gameObject.Remove(gameObject);
     }
 }

@@ -7,6 +7,8 @@ public class EnemyBase : MonoBehaviour
     //счетчик
     public static event Action<float> OnChangeDamage;
     public static event Action OnChangeKill;
+    public static event Action<GameObject> OnKillBossFigth;
+
 
     [SerializeField] protected float _health;
     [SerializeField] public float _radius;
@@ -107,7 +109,8 @@ public class EnemyBase : MonoBehaviour
     {
         print($"{name} умер");
         Destroy(gameObject);
-        OnChangeKill?.Invoke(); //счетчик
+        OnChangeKill?.Invoke();//счетчик
+        OnKillBossFigth?.Invoke(this.gameObject); //на босс файте
     }
     
 #if UNITY_EDITOR
