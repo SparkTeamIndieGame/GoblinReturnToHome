@@ -8,6 +8,12 @@ public class HealthBonus : MonoBehaviour
     [SerializeField] private PlayerController _playerController;
     [SerializeField] private ParticleSystem _effect;
 
+    public void ConnectHealth(PlayerController playerController, float addHealth, ParticleSystem particle)
+    {
+        _playerController = playerController;
+        _addHealth = addHealth;
+        _effect = particle;
+    }
     private void OnTriggerEnter(Collider other)
     {
         AudioSystem.insance._HP.Play();

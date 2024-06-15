@@ -43,10 +43,7 @@ public abstract class WeaponBase : MonoBehaviour
                 
             }
         }
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            AddAmunicion(12);
-        }
+        
     }
 
     public virtual void StartCountAmun()

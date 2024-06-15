@@ -8,7 +8,12 @@ public class AmourBonus : MonoBehaviour
     [SerializeField] private float _amuniceAdd;
     [SerializeField] private bool _isWeaponBonus;
     [SerializeField] private ParticleSystem _effect;
-
+    
+    public void ConnectWeapon(WeaponBase weapon, float amunicion)
+    {
+        _weapon = weapon;
+        _amuniceAdd = amunicion;
+    }
     private void OnTriggerEnter(Collider other)
     {
 
