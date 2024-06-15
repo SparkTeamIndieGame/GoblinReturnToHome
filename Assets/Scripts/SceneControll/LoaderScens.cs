@@ -12,6 +12,7 @@ public class LoaderScens : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1;
         var NumberScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(NumberScene);
     }
@@ -24,6 +25,7 @@ public class LoaderScens : MonoBehaviour
 
     public void LoadMenu()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(0);
     }
 
