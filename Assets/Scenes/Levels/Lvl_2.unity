@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -756,6 +756,22 @@ PrefabInstance:
     - target: {fileID: 1385709401098730488, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7f81670d88a2f483fa13ada4e007b84f, type: 3}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2757181190123122388, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_Name
@@ -5569,6 +5585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9204653e703ed44af108710f0d6e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _needCountEnemy: {fileID: 0}
   _playerInput: {fileID: 1960088750}
   _scoreControl: {fileID: 1736980540}
   _damageText: {fileID: 671847685}
@@ -19354,6 +19371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 1960088750}
   _scoreControl: {fileID: 1736980540}
+  _needCountEnemy: {fileID: 0}
   _damageText: {fileID: 1088142200}
   _killText: {fileID: 57825519}
 --- !u!95 &1721140863

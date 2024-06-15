@@ -15724,6 +15724,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 80275fb6709be469887fcec7103fba6b, type: 3}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2757181190123122388, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -23425,6 +23441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e9204653e703ed44af108710f0d6e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _needCountEnemy: {fileID: 0}
   _playerInput: {fileID: 306469098}
   _scoreControl: {fileID: 651074720}
   _damageText: {fileID: 1962095212}
@@ -24128,6 +24145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerInput: {fileID: 306469098}
   _scoreControl: {fileID: 651074720}
+  _needCountEnemy: {fileID: 0}
   _damageText: {fileID: 1017754318}
   _killText: {fileID: 681284225}
 --- !u!95 &1980764483

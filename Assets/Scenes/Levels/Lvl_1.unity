@@ -5851,6 +5851,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ba21ade43ee70487686002c5465867e4, type: 3}
+    - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2757181190123122388, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_Name
       value: AudioManager
@@ -33185,7 +33201,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1982777303}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 62ed6c443deeded4bb67ed05f271cf57, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 711384c114d434558a481f021c78b27b, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 2010351797}
