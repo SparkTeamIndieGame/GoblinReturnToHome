@@ -8647,7 +8647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1484421672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10256,7 +10256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cf10191d888748cfa56f7bf9478e032, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _needEnemy: 2
+  _needEnemy: 10
   _needEnemyText: {fileID: 171405824}
   _killText: {fileID: 1521315564}
   _damageText: {fileID: 1604508011}
@@ -13342,7 +13342,6 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 2010351798}
   - {fileID: 1352621431}
-  - {fileID: 1484421673}
   - {fileID: 313826405}
   - {fileID: 112637852}
   - {fileID: 646752967}
@@ -13357,6 +13356,7 @@ SceneRoots:
   - {fileID: 1534458727}
   - {fileID: 1889726891}
   - {fileID: 1940498438}
+  - {fileID: 1484421673}
   - {fileID: 2129841370}
   - {fileID: 457978535}
   - {fileID: 722217593}
