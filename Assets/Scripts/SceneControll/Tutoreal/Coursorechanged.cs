@@ -6,7 +6,7 @@ public class Coursorechanged : MonoBehaviour
     [SerializeField] private Texture2D _cursoreMain;
     private void Start()
     {
-        //UseMainCursore();
+        UseMainCursore();
     }
     public void UseWeaponCursore()
     {
