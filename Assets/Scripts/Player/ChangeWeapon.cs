@@ -5,11 +5,30 @@ public class ChangeWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapon;
     [SerializeField] private PlayerInput PlayerInput;
+    [SerializeField] private bool _isTest;
     int num;
-    // Update is called once per frame
+
+    [Range(0, 4)]
+    [SerializeField] private int _startWeapon;
+
+    private void Start()
+    {
+        for(int i =0; i<weapon.Length; i++)
+        {
+            if (i == _startWeapon)
+                weapon[i].SetActive(true);
+            else
+                weapon[i].SetActive(false);
+        }
+    }
+
+
     void Update()
     {
-        InputKey();
+        if(_isTest)
+            InputKey();
+
+
     }
 
     private void InputKey()
