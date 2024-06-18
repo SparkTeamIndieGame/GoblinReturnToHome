@@ -9,7 +9,7 @@ public class SpawnObject : MonoBehaviour
     static public bool PressStart;
     [Header("Enemies:")]
     public bool IsEnemy;
-    public float DistanceEnemy;
+    //public float DistanceEnemy;
     [Header("Weapon:")]
     public bool IsWeapon;
     public WeaponBase Weapon;
@@ -42,13 +42,13 @@ public class SpawnObject : MonoBehaviour
 
         if (MaxItemInSceneOnTime == 0)
         {
-            MaxItemInSceneOnTime = Point.Count;
+            MaxItemInSceneOnTime = Point.Count + 1;
 
         }
         if (IsEnemy)
         {
             EnemyBase.OnKillBossFigth += RemoveFromList;
-            Object.GetComponent<EnemyBase>()._radius = DistanceEnemy;
+            //Object.GetComponent<EnemyBase>()._radius = DistanceEnemy;
         }
         else if (IsWeapon == true)
         {
