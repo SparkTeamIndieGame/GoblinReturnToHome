@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System.Collections;
 
 public class Enemy : EnemyBase
 {
@@ -7,7 +8,9 @@ public class Enemy : EnemyBase
     public float ShootPeriod = 1.0f;
     public GameObject BulletPrefab;
     public float BulletSpeed = 10.0f;
+    public float _patrulDelay;
 
+    private bool _patrulOn = true; 
     protected float timer;
     readonly protected float MaxPlayerSpeed = 10.0f;
     
@@ -18,10 +21,15 @@ public class Enemy : EnemyBase
 
         //Timer();
 
-        if(_distance < _radius)
+        if (_distance < _radius)
             RayCheck();
+        else if (_distance > _radius)
+        {
+            Patrul();
 
-        
+            if (_patrulOn)
+                StartCoroutine("PatrulCor");
+        }
     }
 
     private void Shoot()
@@ -49,6 +57,34 @@ public class Enemy : EnemyBase
     private void Timer()
     {
         timer += Time.deltaTime;
+    }
+
+    private void PatrulForward()
+    {
+        if(_xEuler == 0)
+        {
+            _xEuler = -180;
+        }
+
+        else
+        {
+            _xEuler = 0;
+        }
+    }
+
+    private void Patrul()
+    {
+        _skin.localRotation = Quaternion.Lerp(_skin.localRotation, Quaternion.Euler(0, _xEuler, 0), _smoothRotation * Time.deltaTime);
+    }
+
+    IEnumerator PatrulCor()
+    {
+        _patrulOn = false;
+        yield return new WaitForSeconds(_patrulDelay) ;
+        {
+            PatrulForward();
+            _patrulOn = true;
+        }
     }
 #if UNITY_EDITOR
     public override void OnDrawGizmos()
