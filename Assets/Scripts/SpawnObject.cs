@@ -63,7 +63,7 @@ public class SpawnObject : MonoBehaviour
 
         StartCoroutine("StartSpawn");
     }
-
+  
     // Update is called once per frame
     void Update()
     {
@@ -109,7 +109,7 @@ public class SpawnObject : MonoBehaviour
     {
 
         while(!PressStart)
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(3);
         List<int> randomValue = new List<int>();
         int random;
         while (Spawn)
