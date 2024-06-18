@@ -15,10 +15,10 @@ public class SpawnObject : MonoBehaviour
     public WeaponBase Weapon;
     public float Amunicion;
     [Header("Health")]
-    public bool IsHealth;
-    public PlayerController PlayerController;
-    public float AddHealth;
-    public ParticleSystem ParticleSystem;
+    //public bool IsHealth;
+    //public PlayerController PlayerController;
+    //public float AddHealth;
+    //public ParticleSystem ParticleSystem;
     [Header("Standart Static")]
     public GameObject Object;
     public List<Transform> Point;
@@ -42,7 +42,7 @@ public class SpawnObject : MonoBehaviour
 
         if (MaxItemInSceneOnTime == 0)
         {
-            MaxItemInSceneOnTime = Point.Count + 1;
+            MaxItemInSceneOnTime = Point.Count;
 
         }
         if (IsEnemy)
@@ -55,11 +55,11 @@ public class SpawnObject : MonoBehaviour
             AmourBonus.OnUsedBossFigth += RemoveFromList;
             Object.GetComponent<AmourBonus>().ConnectWeapon(Weapon, Amunicion);
         }
-        else if (IsHealth == true)
-        {
-            HealthBonus.OnUseBossFigth += RemoveFromList;
-            Object.GetComponent<HealthBonus>().ConnectHealth(PlayerController, AddHealth, ParticleSystem);
-        }
+        //else if (IsHealth == true)
+        //{
+        //    HealthBonus.OnUseBossFigth += RemoveFromList;
+        //    Object.GetComponent<HealthBonus>().ConnectHealth(PlayerController, AddHealth, ParticleSystem);
+        //}
 
         StartCoroutine("StartSpawn");
     }
@@ -110,19 +110,29 @@ public class SpawnObject : MonoBehaviour
 
         while(!PressStart)
         yield return new WaitForSeconds(1);
-
-      
+        List<int> randomValue = new List<int>();
+        int random;
         while (Spawn)
         {
-
             yield return new WaitForSeconds(Daley);
 
             if (_gameObject.Count < MaxItemInSceneOnTime)
             {
-                var random = UnityEngine.Random.Range(0, Point.Count);
-                GameObject @object = Instantiate(Object, Point[random].position, Quaternion.identity);
+               
+                random = UnityEngine.Random.Range(0, Point.Count);
+                if (randomValue.Count > 0)
+                {
+                    for (int i = 0; i < randomValue.Count; i++)
+                    {
+                        if (randomValue[i] == random)
+                        {
+                            random = UnityEngine.Random.Range(0, Point.Count);
+                        }
+                    }
+                }
+                GameObject @object = Instantiate(Object, Point[random].transform.position, Quaternion.identity);
                 _gameObject.Add(@object);
-
+                randomValue.Add(random);
             }
             else
             {

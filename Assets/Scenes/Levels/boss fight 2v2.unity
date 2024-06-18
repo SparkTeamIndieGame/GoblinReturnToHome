@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2327,14 +2327,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 0
-  DistanceEnemy: 60
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 1325643602}
   Point: []
   Daley: 3
@@ -4142,14 +4137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 1
-  DistanceEnemy: 20
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 4781682959192305762, guid: 2f6c0f0da571c4c13887a9f6142774ef, type: 3}
   Point: []
   Daley: 5
@@ -5557,14 +5547,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 0
-  DistanceEnemy: 60
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 752098369}
   Point: []
   Daley: 3
@@ -6889,14 +6874,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 1
-  DistanceEnemy: 20
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 8437032411300678822, guid: ed77238a14d789540bd18a6a9464339a, type: 3}
   Point: []
   Daley: 5
@@ -8026,6 +8006,10 @@ PrefabInstance:
       propertyPath: PlayerInput
       value: 
       objectReference: {fileID: 1484421672}
+    - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _startWeapon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7004526861424113131, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.70942336
@@ -8953,14 +8937,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 0
-  DistanceEnemy: 60
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 1639602333}
   Point: []
   Daley: 3
@@ -12127,14 +12106,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsEnemy: 1
-  DistanceEnemy: 60
   IsWeapon: 0
   Weapon: {fileID: 0}
   Amunicion: 0
-  IsHealth: 0
-  PlayerController: {fileID: 0}
-  AddHealth: 0
-  ParticleSystem: {fileID: 0}
   Object: {fileID: 3024788769193027527, guid: dd894378b25ed7a4aacb5c36382bae37, type: 3}
   Point: []
   Daley: 3
