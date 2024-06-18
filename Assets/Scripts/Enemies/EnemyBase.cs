@@ -12,13 +12,13 @@ public class EnemyBase : MonoBehaviour
 
     [SerializeField] protected float _health;
     [SerializeField] public float _radius;
-    [SerializeField] private float _speedEyes, _speedHand, _smoothRotation;
+    [SerializeField] protected float _speedEyes, _speedHand, _smoothRotation;
     [SerializeField] protected Transform _pivotEyes, _pivotHand, _skin;
 
     protected  Transform _playerTransform;
     private Vector3 _blockZ;
     protected  float _distance;
-    private float _xEuler = -90;
+    protected float _xEuler = -90;
 
     //HealthBar
     [SerializeField] protected GameObject _healhBarFront;
