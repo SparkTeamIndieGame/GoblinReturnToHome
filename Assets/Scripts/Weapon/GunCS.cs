@@ -16,7 +16,7 @@ public class GunCS : WeaponBase
         if (AmunitionCount.GunCount <= 0)
         {
             base.Event();
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
     public override float GetActualScore()

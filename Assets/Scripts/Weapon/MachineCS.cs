@@ -17,7 +17,7 @@ public class MachineCS : WeaponBase
         if (AmunitionCount.MachineCount <= 0)
         {
             base.Event();
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
     public override float GetActualScore()

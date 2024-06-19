@@ -36,7 +36,7 @@ public abstract class WeaponBase : MonoBehaviour
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
         {
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0) && GetActualScore() > 0)
             {
                 Shoot();
                 timer = 0;
@@ -58,19 +58,19 @@ public abstract class WeaponBase : MonoBehaviour
 
             case "Gun":
                 {
-                    AmunitionCount.GunCount = Mathf.Infinity;
+                    AmunitionCount.GunCount = StartAmunicionCount;
                     break;
                 }
 
             case "ShotGun":
                 {
-                    AmunitionCount.ShotGunCount = Mathf.Infinity;
+                    AmunitionCount.ShotGunCount = StartAmunicionCount;
                     break;
                 }
 
             case "Machine":
                 {
-                    AmunitionCount.MachineCount = Mathf.Infinity;
+                    AmunitionCount.MachineCount = StartAmunicionCount;
                     break;
                 }
         }

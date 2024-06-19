@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class ChangeWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapon;
+    [SerializeField] private bool[] _activeWeapon;
     [SerializeField] private PlayerInput PlayerInput;
     [SerializeField] private bool _isTest;
     int num;
@@ -15,7 +16,7 @@ public class ChangeWeapon : MonoBehaviour
     {
         for(int i =0; i<weapon.Length; i++)
         {
-            if (i == _startWeapon)
+            if (_activeWeapon[i])
                 weapon[i].SetActive(true);
             else
                 weapon[i].SetActive(false);
@@ -25,31 +26,28 @@ public class ChangeWeapon : MonoBehaviour
 
     void Update()
     {
-        if(_isTest)
             InputKey();
-
-
     }
 
     private void InputKey()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) && _activeWeapon[0])
         {
             num = 0;
             SetActive(num);
         }
 
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetKeyDown(KeyCode.Alpha2) && _activeWeapon[1])
         {
             num = 1;
             SetActive(num);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && _activeWeapon[2])
         {
             num = 2;
             SetActive(num);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Alpha4) && _activeWeapon[3])
         {
             num = 3;
             SetActive(num);

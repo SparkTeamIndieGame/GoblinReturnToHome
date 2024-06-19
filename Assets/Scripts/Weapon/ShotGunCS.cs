@@ -19,7 +19,7 @@ public class ShotGunCS : WeaponBase
         if (AmunitionCount.ShotGunCount <= 0)
         {
             base.Event();
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
     public override float GetActualScore()

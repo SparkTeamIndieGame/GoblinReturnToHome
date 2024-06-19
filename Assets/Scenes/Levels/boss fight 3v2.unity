@@ -7961,6 +7961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.0177643e-13
       objectReference: {fileID: 0}
+    - target: {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2296200437581126336, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
@@ -8244,6 +8248,22 @@ PrefabInstance:
     - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: _startWeapon
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _activeWeapon.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _activeWeapon.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _activeWeapon.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639533949508370714, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _activeWeapon.Array.data[2]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7004526861424113131, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
