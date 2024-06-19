@@ -13,6 +13,12 @@ public class CoolDownText : MonoBehaviour
     {
         StartCoroutine(TextCreator());
     }
+
+    public void StartSpown()
+    {
+        SpawnObject.PressStart = true;
+    }
+
     private IEnumerator TextCreator()
     {
         for (int i = _cooldownCount; i >= 0; i--)

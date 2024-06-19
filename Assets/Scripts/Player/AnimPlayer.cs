@@ -41,6 +41,7 @@ public class AnimPlayer : MonoBehaviour
     {
         Move(Input.GetAxis("Horizontal"));
         Jump();
+        //_walk.Play();
 
         if(_player.Health <= 0)
         {
@@ -54,14 +55,16 @@ public class AnimPlayer : MonoBehaviour
         {
             _animator.SetBool("Run", true);
             AudioSystem.insance._player_walk.mute = false;
-            _walk.Play();
+            if (_walk.isStopped)
+                _walk.Play();
         }
 
         else
         {
             _animator.SetBool("Run", false);
             AudioSystem.insance._player_walk.mute = true;
-            _walk.Stop();
+            if (_walk.isPlaying)
+                _walk.Stop();
         }
 
     }

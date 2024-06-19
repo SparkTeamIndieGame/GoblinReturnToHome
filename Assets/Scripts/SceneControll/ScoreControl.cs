@@ -1,4 +1,5 @@
 using System;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,8 +23,8 @@ public class ScoreControl : MonoBehaviour
     }
     private void DamageTextUpdate(float value)
     {
+        //templeDamageScore = float.Parse(_damageScore.text);
         templeDamageScore = float.Parse(_damageScore.text);
-
         _damageScore.text = (templeDamageScore + value).ToString();
     }
     private void KillTextUpdate()

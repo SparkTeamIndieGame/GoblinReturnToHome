@@ -43,10 +43,7 @@ public abstract class WeaponBase : MonoBehaviour
                 
             }
         }
-        if(Input.GetKeyUp(KeyCode.W))
-        {
-            AddAmunicion(12);
-        }
+        
     }
 
     public virtual void StartCountAmun()
@@ -61,19 +58,19 @@ public abstract class WeaponBase : MonoBehaviour
 
             case "Gun":
                 {
-                    AmunitionCount.GunCount = StartAmunicionCount;
+                    AmunitionCount.GunCount = Mathf.Infinity;
                     break;
                 }
 
             case "ShotGun":
                 {
-                    AmunitionCount.ShotGunCount = StartAmunicionCount;
+                    AmunitionCount.ShotGunCount = Mathf.Infinity;
                     break;
                 }
 
             case "Machine":
                 {
-                    AmunitionCount.MachineCount = StartAmunicionCount;
+                    AmunitionCount.MachineCount = Mathf.Infinity;
                     break;
                 }
         }

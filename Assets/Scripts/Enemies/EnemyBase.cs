@@ -7,16 +7,18 @@ public class EnemyBase : MonoBehaviour
     //счетчик
     public static event Action<float> OnChangeDamage;
     public static event Action OnChangeKill;
+    public static event Action<GameObject> OnKillBossFigth;
+
 
     [SerializeField] protected float _health;
     [SerializeField] public float _radius;
-    [SerializeField] private float _speedEyes, _speedHand, _smoothRotation;
+    [SerializeField] protected float _speedEyes, _speedHand, _smoothRotation;
     [SerializeField] protected Transform _pivotEyes, _pivotHand, _skin;
 
     protected  Transform _playerTransform;
     private Vector3 _blockZ;
     protected  float _distance;
-    private float _xEuler = -90;
+    protected float _xEuler = -90;
 
     //HealthBar
     [SerializeField] protected GameObject _healhBarFront;
@@ -26,13 +28,15 @@ public class EnemyBase : MonoBehaviour
     public virtual void Awake()
     {
         maxHealth = _health;
-        _playerTransform = FindFirstObjectByType<PlayerController>().transform;
+
+            _playerTransform = FindFirstObjectByType<PlayerController>().transform;
     }
 
     // Update is called once per frame
     public virtual void Update()
     {
-        Monitoring();
+            Monitoring();
+
         BlockTransformZ();
 
         if (_health <= 0)
@@ -105,7 +109,8 @@ public class EnemyBase : MonoBehaviour
     {
         print($"{name} умер");
         Destroy(gameObject);
-        OnChangeKill?.Invoke(); //счетчик
+        OnChangeKill?.Invoke();//счетчик
+        OnKillBossFigth?.Invoke(this.gameObject); //на босс файте
     }
     
 #if UNITY_EDITOR
