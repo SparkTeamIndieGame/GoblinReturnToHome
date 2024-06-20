@@ -13,9 +13,9 @@ public abstract class WeaponBase : MonoBehaviour
     public float ShootPeriod = 1.0f;
     public GameObject BulletPrefab;
     public float BulletSpeed = 10.0f;
-    public GameObject _textEmpty;
 
     public float StartAmunicionCount;
+    public GameObject _textEmpty;
 
     protected float currentAmunicionCount;
 
@@ -32,11 +32,8 @@ public abstract class WeaponBase : MonoBehaviour
     }
     private void Update()
     {
-        if (GetActualScore() == 0)
-            _textEmpty.SetActive(true);
-        else if (GetActualScore() > 0)
-            _textEmpty.SetActive(false);
         //Debug.Log(currentAmunicionCount);
+
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
         {
@@ -52,6 +49,10 @@ public abstract class WeaponBase : MonoBehaviour
             }
         }
         
+        if (GetActualScore() == 0)
+            _textEmpty.SetActive(true);
+        else if (GetActualScore() > 0)
+            _textEmpty.SetActive(false);
     }
 
     public virtual void StartCountAmun()
