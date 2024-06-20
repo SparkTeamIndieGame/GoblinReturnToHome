@@ -22,6 +22,7 @@ public class AudioSystem : MonoBehaviour
     public AudioSource _bullet_gun;
     public AudioSource _bullet_shotgun;
     public AudioSource _bullet_machine;
+    public AudioSource _empty_amunition;
 
     [Header("Bonus")]
     public AudioSource _bullet;
@@ -41,5 +42,6 @@ public class AudioSystem : MonoBehaviour
             insance = this;
         else if (insance == this)
             Destroy(gameObject);
+
     }
 }

@@ -5,8 +5,6 @@ public class ChangeWeapon : MonoBehaviour
 {
     [SerializeField] private GameObject[] weapon;
     [SerializeField] private bool[] _activeWeapon;
-    [SerializeField] private PlayerInput PlayerInput;
-    [SerializeField] private bool _isTest;
     int num;
 
     [Range(0, 4)]
@@ -16,19 +14,35 @@ public class ChangeWeapon : MonoBehaviour
     {
         for(int i =0; i<weapon.Length; i++)
         {
-            if (_activeWeapon[i])
+            if (i == _startWeapon)
                 weapon[i].SetActive(true);
             else
                 weapon[i].SetActive(false);
         }
+        num = _startWeapon;
     }
 
 
     void Update()
     {
-            InputKey();
+        //InputKey();
+        Changed();
     }
 
+    private void Changed()
+    {
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            num++;
+            if (num == weapon.Length)
+                num = 0;
+            else if (!_activeWeapon[num])
+                num = 0;
+            
+            SetActive(num);
+        }
+
+    }
     private void InputKey()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1) && _activeWeapon[0])
