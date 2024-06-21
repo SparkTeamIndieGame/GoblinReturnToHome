@@ -23,6 +23,11 @@ public class LoaderScens : MonoBehaviour
         SceneManager.LoadScene(NumberScene + 1);
     }
 
+    public void UnlockLevel(int index)
+    {
+        LockSystem.UnlockLevel[index - 2] = true;
+    }
+
     public void LoadMenu()
     {
         Time.timeScale = 1;
