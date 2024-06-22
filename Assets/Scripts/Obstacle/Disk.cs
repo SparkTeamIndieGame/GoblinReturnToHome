@@ -5,7 +5,7 @@ using UnityEngine;
 public class Disk : MonoBehaviour
 {
     //[SerializeField] private float _distance;
-    [SerializeField] private float _speed;
+    [SerializeField] private float _speed, _speedRortation;
     [SerializeField] private List<Transform> _point;
     private Vector3 _leftPoint, _rightPoint;
     private bool _left;
@@ -17,20 +17,43 @@ public class Disk : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (transform.position.x <= _leftPoint.x)
+        if (transform.position == _leftPoint)
+        {
             _left = false;
+            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
+            _speedRortation *= -1;
 
-        else if (transform.position.x >= _rightPoint.x)
+        }
+
+        else if (transform.position == _rightPoint)
+        {
             _left = true;
+            if (transform.localScale.y < 0)
+                transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y * -1, transform.localScale.z);
+            if (_speedRortation < 0)
+                _speedRortation *= -1;
+        }
 
-        if(_left)
-            transform.position = Vector3.MoveTowards(transform.position, _leftPoint, _speed * Time.deltaTime);
-        else if(!_left)
-            transform.position = Vector3.MoveTowards(transform.position, _rightPoint, _speed * Time.deltaTime);
 
-
+        TransformPosition();
+        Rotation();
 
     }
+
+    private void TransformPosition()
+    {
+        if (_left)
+            transform.position = Vector3.MoveTowards(transform.position, _leftPoint, _speed * Time.deltaTime);
+        else if (!_left)
+            transform.position = Vector3.MoveTowards(transform.position, _rightPoint, _speed * Time.deltaTime);
+
+    }
+
+    private void Rotation()
+    {
+        transform.Rotate(new Vector3(0, 0, 1 * _speedRortation));
+    }
+
 }
