@@ -9,6 +9,8 @@ public class EnemyHook : EnemyBase
     [SerializeField] protected float _offsetDistance;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _damage;
+    [SerializeField] protected float _attackSpeed;
+
     protected Vector3 _targetPlayerX;
     protected CharacterController _characterControler;
     protected Animator Animator;
@@ -70,20 +72,25 @@ public class EnemyHook : EnemyBase
 
     public virtual void Animation()
     {
+
         if (_distance < _offsetDistance)
         {
+            Animator.speed = _attackSpeed;
             Animator.SetBool("Attack", true);
             Animator.SetBool("Run", false);
 
         }
         else if (_distance > _radius)
         {
+            Animator.speed = 1;
+
             Animator.SetBool("Attack", false);
             Animator.SetBool("Run", false);
         }
 
         else if (_distance < _radius)
         {
+            Animator.speed = 1;
             Animator.SetBool("Run", true);
             Animator.SetBool("Attack", false);
 
