@@ -3,8 +3,9 @@ public class GunCS : WeaponBase
 
     public override void AddAmunicion(float value)
     {
+        base.AddAmunicion(value);
         AmunitionCount.GunCount += value;
-        UseActualAmourCount();
+        //UseActualAmourCount();
     }
     public override void RemoveAmunicion()
     {

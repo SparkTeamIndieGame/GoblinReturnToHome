@@ -9,7 +9,7 @@ public class AmourBonus : MonoBehaviour
 
     [SerializeField] private WeaponBase _weapon;
     [SerializeField] private float _amuniceAdd;
-    [SerializeField] private bool _isWeaponBonus;
+    //[SerializeField] private bool _isWeaponBonus;
     [SerializeField] private ParticleSystem _effect;
     
     public void ConnectWeapon(WeaponBase weapon, float amunicion)
@@ -36,23 +36,23 @@ public class AmourBonus : MonoBehaviour
         //{
         //    _weapon.AddAmunicion(_amuniceAdd);
         //}
-        if (_weapon.gameObject.activeSelf == false)
-        {
-            for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
-            {
-                ActiveGuns.weaponBases[i].gameObject.SetActive(false);
-            }
-            _weapon.gameObject.SetActive(true);
+        //if (_weapon.gameObject.activeSelf == false)
+        //{
+        //    for (int i = 0; i < ActiveGuns.weaponBases.Count; i++)
+        //    {
+        //        ActiveGuns.weaponBases[i].gameObject.SetActive(false);
+        //    }
+        //    _weapon.gameObject.SetActive(true);
 
-            if (_weapon.GetActualScore() <= 0)
-                _weapon.AddAmunicion(_amuniceAdd);
-        }
-        else
-        {
-            _weapon.AddAmunicion(_amuniceAdd);
-        }
+        //    if (_weapon.GetActualScore() <= 0)
+        //        _weapon.AddAmunicion(_amuniceAdd);
+        //}
+        //else
+        //{
+        //    _weapon.AddAmunicion(_amuniceAdd);
+        //}
 
-
+        _weapon.AddAmunicion(_amuniceAdd);
 
 
 
