@@ -13,7 +13,6 @@ public class RodActive : MonoBehaviour
     }
     public virtual void OnTriggerEnter(Collider other)
     {
-        print("gopa");
         if (_wasUsed == false)
         {
             _helperUI.SetActive(true);
@@ -38,7 +37,7 @@ public class RodActive : MonoBehaviour
 
     public virtual void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E) && _active)
+       if (Input.GetKeyDown(KeyCode.F) && _active)
         {
             _animator.SetTrigger("ChangeRodState");
             _wasUsed = true;
