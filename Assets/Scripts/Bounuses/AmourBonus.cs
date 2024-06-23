@@ -53,7 +53,11 @@ public class AmourBonus : MonoBehaviour
         //}
 
         _weapon.AddAmunicion(_amuniceAdd);
-
+        if (this._weapon.gameObject.activeSelf == true)
+        {
+            _weapon.UseActualAmourCount();
+        }
+        
 
 
         AudioSystem.insance._gun.Play();

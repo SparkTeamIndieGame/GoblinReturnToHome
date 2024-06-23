@@ -97,10 +97,10 @@ public abstract class WeaponBase : MonoBehaviour
     }
     public virtual void AddAmunicion(float value)
     {
-        if (this.gameObject.activeSelf == true)
-        {
-            UseActualAmourCount();
-        }
+        //if (this.gameObject.activeSelf == true)
+        //{
+        //    UseActualAmourCount();
+        //}
         //currentAmunicionCount += value;
         //UseActualAmourCount();
     }

@@ -4,7 +4,6 @@ public class MachineCS : WeaponBase
 
     public override void AddAmunicion(float value)
     {
-        base.AddAmunicion(value);
         AmunitionCount.MachineCount += value;
     }
     public override void RemoveAmunicion()

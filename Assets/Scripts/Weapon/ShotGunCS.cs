@@ -6,7 +6,6 @@ public class ShotGunCS : WeaponBase
 {
     public override void AddAmunicion(float value)
     {
-        base.AddAmunicion(value);
         AmunitionCount.ShotGunCount += value;
     }
     public override void RemoveAmunicion()

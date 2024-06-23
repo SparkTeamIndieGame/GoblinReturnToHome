@@ -6,7 +6,6 @@ public class SlaughterCS : WeaponBase
 {
     public override void AddAmunicion(float value)
     {
-        base.AddAmunicion(value);
         AmunitionCount.SlaughterCount += value;
     }
     public override void RemoveAmunicion()
