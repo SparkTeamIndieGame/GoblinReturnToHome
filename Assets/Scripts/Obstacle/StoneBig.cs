@@ -1,28 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StoneBig : MonoBehaviour
 {
-    [SerializeField] private float _speed, _speedRortation;
-    [SerializeField] private Transform _point;
-    private Vector3 _leftPoint;
-    void Start()
+    private float speed, rotationSpeed;
+    private Transform destroyPoint;
+    public void Construct(float speed, float rotationSpeed, Transform destroyPoint)
     {
-        _leftPoint = _point.position;
+        this.speed = speed;
+        this.rotationSpeed = rotationSpeed;
+        this.destroyPoint = destroyPoint;
     }
-
     void FixedUpdate()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _leftPoint, _speed * Time.deltaTime);
+        if (this.transform.position.x > this.destroyPoint.position.x)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, destroyPoint.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
 
         Rotation();
-
     }
 
     private void Rotation()
     {
-        transform.Rotate(new Vector3(0, 0, 1 * _speedRortation));
+        transform.Rotate(new Vector3(0, 0, 1 * rotationSpeed));
     }
 
 }
