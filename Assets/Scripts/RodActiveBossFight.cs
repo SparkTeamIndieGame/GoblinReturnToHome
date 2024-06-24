@@ -8,7 +8,6 @@ public class RodActiveBossFight : RodActive
 
     public override void OnTriggerEnter(Collider other)
     {
-        print("gopa");
         if (_wasUsed == false)
         {
             if(!NeedCountEnemy.ContinueGame)
@@ -45,7 +44,7 @@ public class RodActiveBossFight : RodActive
 
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && _active)
+        if (Input.GetKeyDown(KeyCode.F) && _active)
         {
             _animator.SetTrigger("ChangeRodState");
             _wasUsed = true;

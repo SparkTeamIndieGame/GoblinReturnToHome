@@ -13,14 +13,6 @@ public class SlaughterCS : WeaponBase
         AmunitionCount.SlaughterCount -= 1;
         UseActualAmourCount();
     }
-    //public override void ChekingAmunicion()
-    //{
-    //    if (AmunitionCount.SlaughterCount <= 0)
-    //    {
-    //        //base.Event();
-    //        this.gameObject.SetActive(false);
-    //    }
-    //}
     public override float GetActualScore()
     {
         return AmunitionCount.SlaughterCount;

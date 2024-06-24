@@ -18,7 +18,6 @@ public class RodActive : MonoBehaviour
             _helperUI.SetActive(true);
             _active = true;
         }
-        
     }
     public virtual void OnTriggerExit(Collider other)
     {
@@ -34,7 +33,6 @@ public class RodActive : MonoBehaviour
     {
         AudioSystem.insance._door.Play();
     }
-
     public virtual void Update()
     {
        if (Input.GetKeyDown(KeyCode.F) && _active)
