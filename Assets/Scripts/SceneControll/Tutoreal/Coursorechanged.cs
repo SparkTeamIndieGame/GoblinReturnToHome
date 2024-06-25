@@ -18,6 +18,7 @@ public class Coursorechanged : MonoBehaviour
     public void UseMainCursore()
     {
         Cursor.SetCursor(_cursoreMain, Vector2.zero, CursorMode.Auto);
+        Cursor.visible = true;
     }
 
     public void LoseCursore(bool value)

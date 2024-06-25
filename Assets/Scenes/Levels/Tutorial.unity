@@ -1523,7 +1523,7 @@ PrefabInstance:
     - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ba21ade43ee70487686002c5465867e4, type: 3}
+      objectReference: {fileID: 8300000, guid: a820a2345f16347f98d9167209280010, type: 3}
     - target: {fileID: 1821066693958622398, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
@@ -1536,6 +1536,10 @@ PrefabInstance:
       propertyPath: _door
       value: 
       objectReference: {fileID: 424412182}
+    - target: {fileID: 7694484731496754968, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7757977116307759895, guid: f103fc9ef3fae47568acc30e3bcfe70a, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -3235,6 +3239,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6606160080921589128, guid: fe18dc7407c28b1499fcc0863294e657, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 9183116745020200349, guid: fe18dc7407c28b1499fcc0863294e657, type: 3}
       propertyPath: m_Name
       value: Box (4)
@@ -3698,6 +3706,10 @@ PrefabInstance:
     - target: {fileID: 3513521679849133177, guid: fe18dc7407c28b1499fcc0863294e657, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6606160080921589128, guid: fe18dc7407c28b1499fcc0863294e657, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9183116745020200349, guid: fe18dc7407c28b1499fcc0863294e657, type: 3}
       propertyPath: m_Name
@@ -4205,7 +4217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1a9a395de95bc4e55b020c3707c33c87, type: 2}
+  m_Sprite: {fileID: -920581027, guid: 61e2542280d0b41dc8ae63cfaff12344, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5250,7 +5262,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1846928613}
         m_TargetAssemblyTypeName: LoaderScens, Assembly-CSharp
         m_MethodName: LoadMenu
         m_Mode: 1
@@ -6929,7 +6941,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c8593a0745fc84d528b6fc9139e6decf, type: 2}
+  m_Sprite: {fileID: -1123958552, guid: 61e2542280d0b41dc8ae63cfaff12344, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7645,6 +7657,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 630357914}
     m_Modifications:
+    - target: {fileID: 2358795616654007428, guid: ee8e121f8fb8b0c4b86ae337a1def5a7, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2358795616654007428, guid: ee8e121f8fb8b0c4b86ae337a1def5a7, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e874e3710fb74367b6f24b2f79cf967, type: 2}
     - target: {fileID: 4939133437048491412, guid: ee8e121f8fb8b0c4b86ae337a1def5a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -99.91529
