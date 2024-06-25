@@ -9,6 +9,7 @@ public class DoorOpen : MonoBehaviour
     {
         isFlag = false;
     }
+
     private void FixedUpdate()
     {
         if (isFlag)

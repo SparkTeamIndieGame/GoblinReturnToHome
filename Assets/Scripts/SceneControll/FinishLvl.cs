@@ -12,6 +12,7 @@ public class FinishLvl : MonoBehaviour
     [SerializeField] private GameObject _cutScene;
     [SerializeField] private List<GameObject> _offGameObject;
     [SerializeField] private bool _bossFight;
+
     private void OnTriggerEnter(Collider other)
     {
         if(_bossFight)

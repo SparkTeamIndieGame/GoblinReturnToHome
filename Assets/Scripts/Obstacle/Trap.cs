@@ -7,20 +7,20 @@ public class Trap : MonoBehaviour
     [SerializeField] private Transform _sticks;
     [SerializeField] private float _speedSticksOn, _speedSticksOff;
     [SerializeField] private float _delayOn, _delayOff;
-    private bool _active;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private bool _active;
+
+    private void Update()
     {
         if (_active)
+        {
             AttackStick();
+        }
+
         else if (!_active)
+        {
             OnAttackStick();
+        }
     }
 
     IEnumerator DelayOpen()
@@ -58,8 +58,6 @@ public class Trap : MonoBehaviour
         if (_sticks.localPosition.y <= 2.4)
         {
             _sticks.localPosition = Vector3.MoveTowards(_sticks.localPosition, new Vector3(0, 2.5f, 0), _speedSticksOff * Time.deltaTime);
-
-
         }
 
         else
@@ -67,8 +65,6 @@ public class Trap : MonoBehaviour
             StopCoroutine("DelayClose");
             StartCoroutine("DelayOpen");
         }
-
-
 
     }
 }

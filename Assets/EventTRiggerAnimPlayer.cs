@@ -10,7 +10,7 @@ public class EventTRiggerAnimPlayer : MonoBehaviour
     {
         _player = GetComponent<Animator>();
     }
-    // Start is called before the first frame update
+
     public void PointEnter()
     {
         _player.SetBool("PointEnter", true);

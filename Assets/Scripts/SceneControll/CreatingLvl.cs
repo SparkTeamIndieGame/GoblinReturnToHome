@@ -53,6 +53,7 @@ public class CreatingLvl : MonoBehaviour
         gameObject.transform.localScale = new Vector3(Random.Range(sizeMinMaxX.x, sizeMinMaxX.y), Random.Range(sizeMinMaxY.x, sizeMinMaxY.y), 1.0f);
 
     }
+
     private void CreateDownPlatform()
     {
         downPlatforms = new GameObject[pltformCount];
@@ -76,6 +77,7 @@ public class CreatingLvl : MonoBehaviour
             downPlatforms[i] = newDownPlatform;
         }
     }
+
     private void CreateUpPlatform()
     {
         float currentPosXupPlatform; 
@@ -95,6 +97,7 @@ public class CreatingLvl : MonoBehaviour
             upPlatforms[i] = newUpPlatform;
         }
     }
+
     public void CreateFullLvlAutomatycly()
     {
         TakeLinks();

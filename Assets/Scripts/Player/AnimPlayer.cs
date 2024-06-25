@@ -11,7 +11,6 @@ public class AnimPlayer : MonoBehaviour
 
     private Animator _animator;
     private PlayerController _player;
-    // Start is called before the first frame update
 
     private void OnEnable()
     {
@@ -38,12 +37,10 @@ public class AnimPlayer : MonoBehaviour
         _player = GetComponentInParent<PlayerController>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
         Move(Input.GetAxis("Horizontal"));
         Jump();
-        //_walk.Play();
 
         if(_player.Health <= 0)
         {
@@ -57,16 +54,22 @@ public class AnimPlayer : MonoBehaviour
         {
             _animator.SetBool("Run", true);
             AudioSystem.insance._player_walk.mute = false;
+
             if (_walk.isStopped)
+            {
                 _walk.Play();
+            }
         }
 
         else
         {
             _animator.SetBool("Run", false);
             AudioSystem.insance._player_walk.mute = true;
+
             if (_walk.isPlaying)
+            {
                 _walk.Stop();
+            }
         }
 
     }
@@ -77,8 +80,6 @@ public class AnimPlayer : MonoBehaviour
         {
             _animator.SetTrigger("Jump");
             _jump.Play();
-
-
         }
     }
 
@@ -86,6 +87,7 @@ public class AnimPlayer : MonoBehaviour
     {
         _player.Health -= damage;
         AudioSystem.insance._player_damage.Play();
+
         DamageAnim();
     }
 

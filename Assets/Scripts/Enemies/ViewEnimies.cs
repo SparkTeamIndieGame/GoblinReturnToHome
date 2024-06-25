@@ -6,6 +6,7 @@ public class ViewEnimies : MonoBehaviour
 {
     [SerializeField] private GameObject[] _enemies;
     [SerializeField] private GameObject _player;
+
     [Space (10)]
     [SerializeField] private float _distancionActivation;
     [SerializeField] private float _distancionDeactivation;
@@ -16,6 +17,7 @@ public class ViewEnimies : MonoBehaviour
     {
         ActiveAndDectivate();
     }
+
     private void ActiveAndDectivate()
     {
         for (int i = 0; i < _enemies.Length; i++)

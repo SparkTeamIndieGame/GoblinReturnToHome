@@ -11,7 +11,6 @@ public class PlayFinalCatScene : MonoBehaviour
     [SerializeField] private GameObject _playerInput;
     [SerializeField] private GameObject _catScene;
 
-    // Start is called before the first frame update
 
     private void OnTriggerEnter(Collider other)
     {

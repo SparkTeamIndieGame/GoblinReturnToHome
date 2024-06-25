@@ -14,7 +14,7 @@ public class HPPlayerUI : MonoBehaviour
         _playerHp.value = _player.Health;
 
     }
-    private void Update() //надо переделать на событие
+    private void Update() 
     {
         _playerHp.value = _player.Health;
     }

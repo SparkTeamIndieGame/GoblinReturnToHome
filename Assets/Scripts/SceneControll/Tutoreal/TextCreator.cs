@@ -20,6 +20,7 @@ public class TextCreator : MonoBehaviour
         }
         StartCoroutine(TextAnim());
     }
+
     private IEnumerator TextAnim()
     {
         for (int i = 0; i < defaultText.Length; i++)

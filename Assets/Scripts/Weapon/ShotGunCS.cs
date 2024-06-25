@@ -8,19 +8,21 @@ public class ShotGunCS : WeaponBase
     {
         AmunitionCount.ShotGunCount += value;
     }
+
     public override void RemoveAmunicion()
     {
         AmunitionCount.ShotGunCount -= 1;
         UseActualAmourCount();
     }
+
     public override void ChekingAmunicion()
     {
         if (AmunitionCount.ShotGunCount <= 0)
         {
             base.Event();
-            //this.gameObject.SetActive(false);
         }
     }
+
     public override float GetActualScore()
     {
         return AmunitionCount.ShotGunCount;

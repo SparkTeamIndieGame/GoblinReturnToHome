@@ -10,12 +10,12 @@ public class Tight : MonoBehaviour
     private Camera _camera;
     private Vector3 mousePos;
     private float _xEuler;
-    //private Ray ray;
-    //public Camera _mousePos;
+
     private void Awake()
     {
         _camera = Camera.main;
     }
+
     private void Update()
     {
         RotationForward();
@@ -28,20 +28,11 @@ public class Tight : MonoBehaviour
         mousePos.z = -_camera.transform.position.z;
 
         transform.position = _camera.ScreenToWorldPoint(mousePos);
-
-        //ray = new Ray(transform.position, Vector3.forward);
-        //Debug.DrawRay(transform.position, Vector3.forward * 100f, Color.yellow);
-        //print(ray.direction);
-
-
     }
 
     private void RotateHand()
     {
         _hand.rotation = Quaternion.Slerp(_hand.rotation, Quaternion.LookRotation(transform.position - _hand.position), _speed * Time.deltaTime);
-        //Vector3 angle = transform.position - _hand.position;
-        //Vector3 angleXY = new Vector3(angle.x, angle.y, 0);
-        //_hand.rotation = Quaternion.LookRotation(angleXY * _speed * Time.deltaTime);
     }
 
 

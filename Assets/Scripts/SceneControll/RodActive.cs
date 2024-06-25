@@ -22,12 +22,8 @@ public class RodActive : MonoBehaviour
     }
     public virtual void OnTriggerExit(Collider other)
     {
-        
-        
         _helperUI.SetActive(false);
-        _active = false;
-        
-        
+        _active = false;   
     }
 
     public void SoundActive()
