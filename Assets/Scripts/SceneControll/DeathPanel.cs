@@ -3,18 +3,20 @@ using UnityEngine.UI;
 
 public class DeathPanel : MonoBehaviour
 {
+    public static bool _isDeath = false;
+
     [SerializeField] private NeedCountEnemy _needCountEnemy;
     [SerializeField] private GameObject _playerInput;
     [SerializeField] private ScoreControl _scoreControl;
 
     [SerializeField] private Text _damageText;
     [SerializeField] private Text _killText;
-    public static bool _isDeath = false;
     
     private void Start()
     {
         _isDeath = false;
     }
+
     private void Update()
     {
         if (_isDeath == true)
@@ -22,6 +24,7 @@ public class DeathPanel : MonoBehaviour
             UpdateText();
         }
     }
+
     private void UpdateText()
     {
         if (_scoreControl != null)

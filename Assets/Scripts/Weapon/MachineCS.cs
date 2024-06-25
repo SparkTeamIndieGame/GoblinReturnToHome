@@ -6,19 +6,21 @@ public class MachineCS : WeaponBase
     {
         AmunitionCount.MachineCount += value;
     }
+
     public override void RemoveAmunicion()
     {
         AmunitionCount.MachineCount -= 1;
         UseActualAmourCount();
     }
+
     public override void ChekingAmunicion()
     {
         if (AmunitionCount.MachineCount <= 0)
         {
             base.Event();
-            //this.gameObject.SetActive(false);
         }
     }
+
     public override float GetActualScore()
     {
         return AmunitionCount.MachineCount;

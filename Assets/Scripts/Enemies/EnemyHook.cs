@@ -6,6 +6,7 @@ using System;
 public class EnemyHook : EnemyBase
 {
     public static event Action<float> DamageHit;
+
     [SerializeField] protected float _offsetDistance;
     [SerializeField] protected float _speed;
     [SerializeField] protected float _damage;
@@ -20,6 +21,7 @@ public class EnemyHook : EnemyBase
         base.Awake();
 
         _characterControler = GetComponent<CharacterController>();
+
         Animator = GetComponent<Animator>();
     }
     public override void Update()
@@ -27,9 +29,12 @@ public class EnemyHook : EnemyBase
         base.Update();
 
         if (!_characterControler.isGrounded)
+        {
             _targetPlayerX = Vector3.zero;
+        }
 
         Pursuit();
+
         Animation();
 
     }
@@ -63,9 +68,8 @@ public class EnemyHook : EnemyBase
         if(_distance < _offsetDistance)
         {
             DamageHit?.Invoke(_damage);
-            AudioSystem.insance._enemy_attack.Play();
-            //print($"{name} ударил игрока, урон составил {_damage} и у игрорка осталось {_playerTransform.gameObject.GetComponent<PlayerController>().Health}");
 
+            AudioSystem.insance._enemy_attack.Play();
         }
 
     }
@@ -105,8 +109,6 @@ public class EnemyHook : EnemyBase
         Handles.DrawWireDisc(this.transform.position, Vector3.forward, _offsetDistance);
         
     }
-    
-
 #endif
 }
 

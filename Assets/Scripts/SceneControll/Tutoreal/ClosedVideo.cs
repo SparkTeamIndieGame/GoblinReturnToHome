@@ -15,15 +15,18 @@ public class ClosedVideo : MonoBehaviour
             on.SetActive(false);
         }
     }
+
     private void Start()
     {
         StartCoroutine(ClosedVideoCorutine());
     }
+
     private IEnumerator ClosedVideoCorutine()
     {
         yield return new WaitForSeconds(_timeVideo);
         animatorPortal.SetTrigger("Play");
         Cursor.SetCursor(_weapon, new Vector2(31, 32), CursorMode.Auto);
+
         foreach (var on in _onCanvas)
         {
             on.SetActive(true);

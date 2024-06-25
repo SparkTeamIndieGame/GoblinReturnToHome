@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
@@ -6,6 +5,7 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] private  Transform _target;
     [SerializeField] private float _speed;
     [SerializeField] private Transform _tight;
+
     private Vector3 _offset; // x =9.2; y = 7.3; z = -14;
     private float _posXLeft, _posXRight;
     private bool _forward = true;
@@ -26,14 +26,25 @@ public class FollowCamera : MonoBehaviour
         _direction = _tight.localPosition.x;
 
         if (_direction > 0)
+        {
             _forward = true;
+        }
+
         else if (_direction < 0)
+        {
             _forward = false;
+        }
 
         if (_forward)
+        {
             _offset.x = _posXRight;
+        }
+
         else
+        {
             _offset.x = _posXLeft;
+        }
+
     }
 
 

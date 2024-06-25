@@ -4,15 +4,19 @@ public class StoneBig : MonoBehaviour
 {
     private float speed, rotationSpeed;
     private Transform destroyPoint;
+
     public void Construct(float speed, float rotationSpeed, Transform destroyPoint)
     {
         this.speed = speed;
         this.rotationSpeed = rotationSpeed;
         this.destroyPoint = destroyPoint;
     }
-    void FixedUpdate()
+
+    private void FixedUpdate()
     {
-        if (this.transform.position.x > this.destroyPoint.position.x)
+        Rotation();
+
+        if (transform.position.x > destroyPoint.position.x)
         {
             transform.position = Vector3.MoveTowards(transform.position, destroyPoint.position, speed * Time.deltaTime);
         }
@@ -21,7 +25,6 @@ public class StoneBig : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        Rotation();
     }
 
     private void Rotation()

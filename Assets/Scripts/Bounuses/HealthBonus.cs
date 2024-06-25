@@ -17,14 +17,17 @@ public class HealthBonus : MonoBehaviour
         _addHealth = addHealth;
         _effect = particle;
     }
+
     private void OnTriggerEnter(Collider other)
     {
         AudioSystem.insance._HP.Play();
+
         _playerController.AddHealth(_addHealth);
 
         Instantiate(_effect, transform.position, Quaternion.identity);
 
-        Destroy(this.gameObject);
         OnUseBossFigth?.Invoke(this.gameObject);
+
+        Destroy(this.gameObject);
     }
 }

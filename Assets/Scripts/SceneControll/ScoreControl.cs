@@ -16,27 +16,31 @@ public class ScoreControl : MonoBehaviour
         EnemyBase.OnChangeDamage += DamageTextUpdate;
         EnemyBase.OnChangeKill += KillTextUpdate;
     }
+
     private void OnDisable()
     {
         EnemyBase.OnChangeDamage -= DamageTextUpdate;
         EnemyBase.OnChangeKill -= KillTextUpdate;
     }
+
     private void DamageTextUpdate(float value)
     {
-        //templeDamageScore = float.Parse(_damageScore.text);
         templeDamageScore = float.Parse(_damageScore.text);
         _damageScore.text = (templeDamageScore + value).ToString();
     }
+
     private void KillTextUpdate()
     {
         templeKillScore = float.Parse(_killScore.text);
 
         _killScore.text = (templeKillScore + 1).ToString();
     }
+
     public float GetKillScore()
     {
         return float.Parse(_killScore.text);
     }
+
     public float GetDamageScore()
     {
         return float.Parse(_damageScore.text);

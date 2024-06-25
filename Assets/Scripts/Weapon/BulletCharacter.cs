@@ -6,7 +6,6 @@ public class BulletCharacter : MonoBehaviour
     [SerializeField] protected float _lifeTime = 5.0f;
     [SerializeField] ParticleSystem _blood;
 
-    //public static event Action Damage;
 
     private void Start()
     {

@@ -15,8 +15,5 @@ public class SkipTutorial : MonoBehaviour
         {
             on.SetActive(true);
         }
-
-        //Cursor.SetCursor(_weapon, new Vector2(31, 32), CursorMode.Auto);
-
     }
 }

@@ -17,13 +17,14 @@ public abstract class WeaponBase : MonoBehaviour
     public float StartAmunicionCount;
     public GameObject _textEmpty;
 
+    [SerializeField] protected ParticleSystem[] _effect;
+    [SerializeField] protected AudioSource _soundShoot;
+
     protected float currentAmunicionCount;
 
     private float timer;
     readonly protected float MaxPlayerSpeed = 10.0f;
 
-    [SerializeField] protected ParticleSystem[] _effect;
-    [SerializeField] protected AudioSource _soundShoot;
 
     private void Start()
     {
@@ -32,8 +33,6 @@ public abstract class WeaponBase : MonoBehaviour
     }
     private void Update()
     {
-        //Debug.Log(currentAmunicionCount);
-
         timer += Time.deltaTime;
         if (timer > ShootPeriod)
         {
@@ -43,6 +42,7 @@ public abstract class WeaponBase : MonoBehaviour
                 timer = 0;
                 
             }
+
             else if(Input.GetMouseButton(0) && GetActualScore() <= 0)
             {
                 AudioSystem.insance._empty_amunition.Play();
@@ -50,9 +50,14 @@ public abstract class WeaponBase : MonoBehaviour
         }
         
         if (GetActualScore() == 0)
+        {
             _textEmpty.SetActive(true);
+        }
+
         else if (GetActualScore() > 0)
+        {
             _textEmpty.SetActive(false);
+        }
     }
 
     public virtual void StartCountAmun()
@@ -96,36 +101,25 @@ public abstract class WeaponBase : MonoBehaviour
         ChekingAmunicion();
     }
     public virtual void AddAmunicion(float value)
-    {
-        //if (this.gameObject.activeSelf == true)
-        //{
-        //    UseActualAmourCount();
-        //}
-        //currentAmunicionCount += value;
-        //UseActualAmourCount();
-    }
+    {}
+
     public virtual void RemoveAmunicion()
-    {
-        //currentAmunicionCount -= 1;
-        //UseActualAmourCount();
-    }
+    {}
+
     public virtual void ChekingAmunicion()
-    {
-        //if (currentAmunicionCount <= 0)
-        //{
-        //    this.gameObject.SetActive(false);
-        //    OnWeaponChange?.Invoke();
-        //}
-    }
+    {}
+
     public virtual float GetActualScore()
     {
          return currentAmunicionCount;
         
     }
+
     public virtual void UseActualWeaponSprite()
     {
         WeaponImage.sprite = WeaponSprite;
     }
+
     public virtual void UseActualAmourCount()
     {
         if (GetActualScore() > int.MaxValue)

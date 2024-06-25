@@ -9,9 +9,13 @@ public class CusrorChange : MonoBehaviour
     void Start()
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
+        {
             _hotSpot = new Vector2(31, 32);
+        }
         else
+        {
             _hotSpot = Vector2.zero;
+        }
 
             Cursor.SetCursor(cursorTexture, _hotSpot, CursorMode.Auto);
     }

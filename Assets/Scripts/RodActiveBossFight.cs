@@ -23,6 +23,7 @@ public class RodActiveBossFight : RodActive
         }
 
     }
+
     public override void OnTriggerExit(Collider other)
     {
         if (_wasUsed == false)

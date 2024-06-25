@@ -5,21 +5,21 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private float _speed;
     [SerializeField] private float _life;
-    Vector3 _direction;
-    Rigidbody _rigidbody;
-    // Start is called before the first frame update
+    private Vector3 _direction;
+    private Rigidbody _rigidbody;
+
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _direction = GameObject.FindGameObjectWithTag("PointBullet").transform.forward;
     }
-    void Start()
+
+    private void Start()
     {
         Destroy(gameObject, _life);
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
        _rigidbody.velocity = _direction * _speed;
     }

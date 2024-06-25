@@ -12,10 +12,6 @@ public class FinishScore : MonoBehaviour
     [SerializeField] private Text _killText;
     [SerializeField] private Text _rank;
     [SerializeField] private List<string> _listRank;
-
-    /// <summary>
-    /// Интервалы выставляются попарно. Пример убито от 0 до 3, то есть _listRangeEnemy[0] = 0, _listRangeEnemy[1] = 3;
-    /// </summary>
     [SerializeField] private List<int> _listRangeEnemy;
     
     public void UpdateText()

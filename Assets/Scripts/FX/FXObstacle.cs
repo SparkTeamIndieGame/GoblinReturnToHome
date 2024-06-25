@@ -12,24 +12,19 @@ public class FXObstacle : MonoBehaviour
     [SerializeField] private float _delay;
 
     private ParticleSystem ParticleSystem;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
         ParticleSystem = GetComponent<ParticleSystem>();
-        StartCoroutine("DelayStart");
-        ParticleSystem.trigger.AddCollider(GameObject.FindAnyObjectByType<PlayerController>().transform);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        StartCoroutine("DelayStart");
+
+        ParticleSystem.trigger.AddCollider(GameObject.FindAnyObjectByType<PlayerController>().transform);
     }
 
     private void OnParticleTrigger()
     {
         Damage?.Invoke(_damage);
-        print("hit");
     }
 
     IEnumerator DelayStart()
@@ -38,7 +33,6 @@ public class FXObstacle : MonoBehaviour
         {
             yield return new WaitForSeconds(_delay);
             ParticleSystem.Play();
-
         }
     }
 }

@@ -28,23 +28,16 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
-        //maxHealth = Health;
     }
 
-    // Update is called once per frame
     void Update()
     {
-//        print(Health);
         Gravity();
+
         MoveForward();
+
         BlockTransformZ();
-        //RotationForward();
-        //if(Health <= 0)
-        //{
-        //    print("Убтли су**");
-        //    //_reboot.SetActive(true);
-        //    Destroy(gameObject);
-        //}
+       
     }
 
 
@@ -87,16 +80,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //private void RotationForward()
-    //{
-    //    if (_input.x > 0)
-    //        _xEuler = 0;
-    //    else if (_input.x < 0)
-    //        _xEuler = -180;
-
-    //    transform.localRotation = Quaternion.Lerp(transform.localRotation, Quaternion.Euler(0, _xEuler, 0), _smoothRotation * Time.deltaTime);
-    //}
-
     public void Jump(InputAction.CallbackContext context)
     {
         if (!context.started) return;
@@ -113,7 +96,8 @@ public class PlayerController : MonoBehaviour
         _blockZ.y = transform.position.y;
         transform.position = _blockZ;
     }
-    //Для бонуса здоровья!
+
+    
     public void AddHealth(float value)
     {
         if ((Health += value) > maxHealth)
