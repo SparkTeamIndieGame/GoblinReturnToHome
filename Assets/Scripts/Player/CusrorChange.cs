@@ -10,7 +10,7 @@ public class CusrorChange : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex != 0)
         {
-            _hotSpot = new Vector2(31, 32);
+            _hotSpot = new Vector2(60, 60);
         }
         else
         {

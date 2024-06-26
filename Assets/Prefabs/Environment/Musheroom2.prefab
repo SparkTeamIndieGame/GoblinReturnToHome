@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1566737549804165928}
   - component: {fileID: 3175573571406623992}
   - component: {fileID: 1600661753227445405}
+  - component: {fileID: 1430571160164823148}
   m_Layer: 0
   m_Name: Musheroom2
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1430571160164823148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2532500188527295013}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09312189, y: 0.1023504, z: 0.16404937}
+  m_Center: {x: -0.010729311, y: 0.005123978, z: 0.04458509}

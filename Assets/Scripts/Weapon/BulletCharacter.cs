@@ -19,6 +19,12 @@ public class BulletCharacter : MonoBehaviour
         {
             Instantiate(_blood, transform.position, transform.rotation);
         }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+
         Destroy(this.gameObject);
     }
 }

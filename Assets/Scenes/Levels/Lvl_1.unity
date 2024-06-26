@@ -7586,37 +7586,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2239927522116356827, guid: af47bc2ef30958a49bbed4a5e60e4200, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 656782621}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af47bc2ef30958a49bbed4a5e60e4200, type: 3}
---- !u!1 &656782620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2239927522116356827, guid: af47bc2ef30958a49bbed4a5e60e4200, type: 3}
-  m_PrefabInstance: {fileID: 656782619}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &656782621
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 656782620}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.10900346, y: 0.023583477, z: 0.10900343}
-  m_Center: {x: -0.003038444, y: 0.004201765, z: 0.0014100859}
 --- !u!1001 &658718344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33380,8 +33351,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.02, y: 0.027967976, z: 0.019999996}
+  m_Center: {x: 0, y: 0.003983984, z: 1.978313e-17}
 --- !u!33 &3469287838251111329
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33409,8 +33380,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.02, y: 0.027448598, z: 0.019999996}
+  m_Center: {x: 0, y: 0.0037242987, z: 1.5474723e-17}
 --- !u!33 &3469287838446242652
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -33438,8 +33409,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02, y: 0.019999996, z: 0.019999996}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.02, y: 0.026767084, z: 0.019999996}
+  m_Center: {x: 0, y: 0.0033835869, z: 5.117826e-18}
 --- !u!33 &3653946720629056113
 MeshFilter:
   m_ObjectHideFlags: 0
