@@ -35,13 +35,13 @@ public class Enemy : EnemyBase
     private void Shoot()
     {
         GameObject newBullet = Instantiate(BulletPrefab, SpawnPoint[0].position, SpawnPoint[0].rotation);
-        newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed); // изменить при настройке модели врага "-"
+        newBullet.GetComponent<Rigidbody>().velocity = SpawnPoint[0].forward * (BulletSpeed + MaxPlayerSpeed); 
     }
 
     private void RayCheck()
     {
         Timer();
-        Ray ray = new Ray(SpawnPoint[0].position, SpawnPoint[0].forward);// изменить при настройке модели врага "-"
+        Ray ray = new Ray(SpawnPoint[0].position, SpawnPoint[0].forward);
         RaycastHit hit;
         Debug.DrawRay(ray.origin, ray.direction * 100, Color.yellow);
         if (timer > ShootPeriod && Physics.Raycast(ray, out hit))

@@ -19,6 +19,7 @@ public class AnimPlayer : MonoBehaviour
         EnemyHook.DamageHit  += Damage;
         BoxCrush.DamagePLayer += Damage;
         FXObstacle.Damage += Damage;
+        BeeMove.DamageBee += Damage;
     }
 
     private void OnDisable()
@@ -28,6 +29,8 @@ public class AnimPlayer : MonoBehaviour
         EnemyHook.DamageHit  -= Damage;
         BoxCrush.DamagePLayer -= Damage;
         FXObstacle.Damage -= Damage;
+        BeeMove.DamageBee -= Damage;
+
 
 
     }
