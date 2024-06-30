@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        Health = 999999;
     }
 
     void Update()

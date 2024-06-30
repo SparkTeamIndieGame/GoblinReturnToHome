@@ -245,6 +245,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 6730493624429847376, guid: 6d2f81aa75b2bcf498d2a15c708e3cd4, type: 3}
   BulletSpeed: 9
   StartAmunicionCount: 0
+  _textEmpty: {fileID: 0}
   _effect:
   - {fileID: 1988001955349363459}
   _soundShoot: {fileID: 0}
@@ -552,8 +553,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d712a9e947b842ce8dd2acbd913e1be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 5
-  maxHealth: 10
+  Health: 99999
+  maxHealth: 16
   _speed: 10
   _gravityMultiplier: 1
   _jumpPower: 2.5
@@ -2517,6 +2518,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 3562671572011990003, guid: cca3287fd6e16064e99d5b04a8d36a01, type: 3}
   BulletSpeed: 13
   StartAmunicionCount: 12
+  _textEmpty: {fileID: 0}
   _effect:
   - {fileID: 3155874653692174479}
   - {fileID: 3988404285559310480}
@@ -3146,6 +3148,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 870121313383642551, guid: 65372c8a0b1185e4ba090434abbc266e, type: 3}
   BulletSpeed: 11
   StartAmunicionCount: 10
+  _textEmpty: {fileID: 0}
   _effect:
   - {fileID: 7513179439800064011}
   _soundShoot: {fileID: 0}
@@ -3332,6 +3335,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 3101683171157621229, guid: bf7d88dcb02d0bf4b80d4ac6801382d5, type: 3}
   BulletSpeed: 15
   StartAmunicionCount: 30
+  _textEmpty: {fileID: 0}
   _effect:
   - {fileID: 6895284527414910192}
   _soundShoot: {fileID: 0}
@@ -4022,7 +4026,6 @@ MonoBehaviour:
   - {fileID: 7115112714178334615}
   - {fileID: 5937348940166214337}
   - {fileID: 7231414786799539701}
-  PlayerInput: {fileID: 0}
 --- !u!1 &8887096149094427913
 GameObject:
   m_ObjectHideFlags: 0
@@ -4157,7 +4160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _delay: 2.6
-  _reboot: {fileID: 0}
+  _deathPanel: {fileID: 0}
   _meshRender: {fileID: 8545248481180976973}
   _walk: {fileID: 3114725437697755660}
   _jump: {fileID: 1533182370609789244}
