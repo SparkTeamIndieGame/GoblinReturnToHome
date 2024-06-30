@@ -4200,6 +4200,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5246716512959866017, guid: dbed719793bae425082130e7e0559f33, type: 3}
+      propertyPath: _target
+      value: 
+      objectReference: {fileID: 7066001028065535681}
+    - target: {fileID: 5246716512959866017, guid: dbed719793bae425082130e7e0559f33, type: 3}
+      propertyPath: _heatPerShot
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5962766194275291874, guid: dbed719793bae425082130e7e0559f33, type: 3}
       propertyPath: m_Name
       value: EnemyTurretPrefab
@@ -25512,6 +25520,17 @@ Transform:
   - {fileID: 1269836197}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1535212492 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5246716512959866017, guid: dbed719793bae425082130e7e0559f33, type: 3}
+  m_PrefabInstance: {fileID: 341224321}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db155239d6546483a9cad53329e0be33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1554368812
 GameObject:
   m_ObjectHideFlags: 0
@@ -33234,6 +33253,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pushka_Lv4
       objectReference: {fileID: 0}
+    - target: {fileID: 4191482211894372764, guid: 52010a7cd5836409da01dd0c4c6a6176, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4576465613116619345, guid: 52010a7cd5836409da01dd0c4c6a6176, type: 3}
       propertyPath: _target
       value: 
@@ -34757,7 +34780,7 @@ PrefabInstance:
     - target: {fileID: 2904507006429957169, guid: 37bbeb144f76b4dfdab660d59abf9377, type: 3}
       propertyPath: _connectedTurret
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1535212492}
     - target: {fileID: 3570293790612625078, guid: 37bbeb144f76b4dfdab660d59abf9377, type: 3}
       propertyPath: m_LocalPosition.x
       value: -83.81
@@ -34801,6 +34824,10 @@ PrefabInstance:
     - target: {fileID: 7129208039652707070, guid: 37bbeb144f76b4dfdab660d59abf9377, type: 3}
       propertyPath: m_Name
       value: signalnaia_lampa
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129208039652707070, guid: 37bbeb144f76b4dfdab660d59abf9377, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -36189,6 +36216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pushka_Lv1
       objectReference: {fileID: 0}
+    - target: {fileID: 111059291114916169, guid: 57cbbef6e8a544337a5ee0f0791ab442, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 723419909447789613, guid: 57cbbef6e8a544337a5ee0f0791ab442, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.5641218
@@ -36404,6 +36435,10 @@ PrefabInstance:
     - target: {fileID: 7047264380898431280, guid: 715c52a770b3c450dbf58b9fcab0a82a, type: 3}
       propertyPath: m_Name
       value: pushka_Lv3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047264380898431280, guid: 715c52a770b3c450dbf58b9fcab0a82a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7567925934957210881, guid: 715c52a770b3c450dbf58b9fcab0a82a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36676,6 +36711,10 @@ PrefabInstance:
     - target: {fileID: 7336161389897853154, guid: 337835ff1ba384536b528cd12ee7879c, type: 3}
       propertyPath: m_Name
       value: pushka_Lv2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7336161389897853154, guid: 337835ff1ba384536b528cd12ee7879c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37778,6 +37817,10 @@ PrefabInstance:
     - target: {fileID: 6295333473402147653, guid: 03ec9733aa6d1426a907017b0cf3552a, type: 3}
       propertyPath: m_Name
       value: EnemyTurretPrefabV2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6295333473402147653, guid: 03ec9733aa6d1426a907017b0cf3552a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8023101384520866486, guid: 03ec9733aa6d1426a907017b0cf3552a, type: 3}
       propertyPath: m_LocalPosition.x
