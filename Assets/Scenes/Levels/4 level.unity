@@ -19517,7 +19517,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1774df67c9b6fc94fbbd6d5162558daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursoreWeapon: {fileID: 2800000, guid: 1f55a4d105aa6426c8a48b9817b4a148, type: 3}
+  _cursoreWeapon: {fileID: 2800000, guid: 7460046dd11ea4c4692fb15a5cdaf6d5, type: 3}
   _cursoreMain: {fileID: 2800000, guid: 9e56c7a55aa6a4e2c880467b8dab8f3d, type: 3}
 --- !u!4 &1407735753
 Transform:
@@ -26039,6 +26039,11 @@ PrefabInstance:
     - target: {fileID: 5257883960586505479, guid: ff6a3a3f7562b415b84255e9326f25ec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472808280801499112, guid: ff6a3a3f7562b415b84255e9326f25ec, type: 3}
+      propertyPath: m_Text
+      value: "\u041E\u0441\u0442\u0435\u0440\u0435\u0433\u0430\u0439\u0442\u0435\u0441\u044C
+        \u0431\u0443\u043B\u044B\u0436\u043D\u0438\u043A\u043E\u0432!"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
