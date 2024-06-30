@@ -29080,7 +29080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1774df67c9b6fc94fbbd6d5162558daa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cursoreWeapon: {fileID: 2800000, guid: 1f55a4d105aa6426c8a48b9817b4a148, type: 3}
+  _cursoreWeapon: {fileID: 2800000, guid: 7460046dd11ea4c4692fb15a5cdaf6d5, type: 3}
   _cursoreMain: {fileID: 2800000, guid: 9e56c7a55aa6a4e2c880467b8dab8f3d, type: 3}
 --- !u!4 &1992208272
 Transform:
@@ -31965,7 +31965,11 @@ PrefabInstance:
     - target: {fileID: 9152408607548739138, guid: 65596d0cfe2de4711ac8d5532fdb3ac9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 1051465019}
+      objectReference: {fileID: 2307394521308501587}
+    - target: {fileID: 9152408607548739138, guid: 65596d0cfe2de4711ac8d5532fdb3ac9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

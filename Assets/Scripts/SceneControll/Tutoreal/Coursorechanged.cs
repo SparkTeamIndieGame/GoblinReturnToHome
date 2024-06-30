@@ -12,7 +12,7 @@ public class Coursorechanged : MonoBehaviour
 
     public void UseWeaponCursore()
     {
-        Cursor.SetCursor(_cursoreWeapon, new Vector2(31.0f, 32.0f), CursorMode.Auto);
+        Cursor.SetCursor(_cursoreWeapon, new Vector2(60.0f, 60.0f), CursorMode.Auto);
     }
 
     public void UseMainCursore()
