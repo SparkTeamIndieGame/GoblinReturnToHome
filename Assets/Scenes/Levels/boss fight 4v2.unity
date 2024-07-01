@@ -4590,7 +4590,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.02351
+      value: -38.73
       objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11414,6 +11414,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _jumpPower
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7687340713839848848, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.000010982091
@@ -13749,6 +13753,10 @@ PrefabInstance:
       propertyPath: _damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14498,7 +14506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needEnemyText: {fileID: 171405824}
-  _needEnemy: 30
+  _needEnemy: 18
   _killText: {fileID: 1521315564}
   _damageText: {fileID: 1604508011}
 --- !u!4 &1751809965
@@ -15270,6 +15278,10 @@ PrefabInstance:
     - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
       propertyPath: _damage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16845,6 +16857,10 @@ PrefabInstance:
     - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
       propertyPath: _damage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 0.7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

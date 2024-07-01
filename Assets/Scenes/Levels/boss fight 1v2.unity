@@ -9497,6 +9497,10 @@ PrefabInstance:
       propertyPath: maxHealth
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: _jumpPower
+      value: 2.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7687340713839848848, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0.000010982091
@@ -12250,7 +12254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _needEnemyText: {fileID: 171405824}
-  _needEnemy: 10
+  _needEnemy: 8
   _killText: {fileID: 1521315564}
   _damageText: {fileID: 1604508011}
 --- !u!4 &1751809965
