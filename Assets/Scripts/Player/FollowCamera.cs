@@ -5,6 +5,7 @@ public class FollowCamera : MonoBehaviour
     [SerializeField] private  Transform _target;
     [SerializeField] private float _speed;
     [SerializeField] private Transform _tight;
+    [SerializeField] private float _view1 = 60, _view2 = 75;
 
     private Vector3 _offset; // x =9.2; y = 7.3; z = -14;
     private float _posXLeft, _posXRight;
@@ -24,6 +25,8 @@ public class FollowCamera : MonoBehaviour
     private void Update()
     {
         _direction = _tight.localPosition.x;
+
+        UpView();
 
         if (_direction > 0)
         {
@@ -47,7 +50,19 @@ public class FollowCamera : MonoBehaviour
 
     }
 
+    private void UpView()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            if(Camera.main.fieldOfView == _view1)
+            {
+               Camera.main.fieldOfView = _view2;
+            }
 
+            else
+               Camera.main.fieldOfView = _view1;
+        }
+    }
     private void LateUpdate()
     {
         if (_target != null)

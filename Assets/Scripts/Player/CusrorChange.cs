@@ -17,6 +17,7 @@ public class CusrorChange : MonoBehaviour
             _hotSpot = Vector2.zero;
         }
 
-            Cursor.SetCursor(cursorTexture, _hotSpot, CursorMode.Auto);
+        Cursor.SetCursor(cursorTexture, _hotSpot, CursorMode.Auto);
+        Cursor.visible = true;
     }
 }

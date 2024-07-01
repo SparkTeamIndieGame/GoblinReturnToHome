@@ -41,6 +41,8 @@ public class AnimPlayer : MonoBehaviour
         goblinColor = _ConstGoblinMat.color;
         _animator = GetComponent<Animator>();
         _player = GetComponentInParent<PlayerController>();
+        _goblinMat.color = _ConstGoblinMat.color;
+
     }
 
     private void Update()
@@ -121,8 +123,9 @@ public class AnimPlayer : MonoBehaviour
     {
         yield return new WaitForSeconds(_delay);
         _deathPanel.SetActive(true);
-        Destroy(transform.parent.gameObject);
         DeathPanel._isDeath = true;
+        _goblinMat.color = _ConstGoblinMat.color;
+        Destroy(transform.parent.gameObject);
     }
 
     IEnumerator HitMaterial()

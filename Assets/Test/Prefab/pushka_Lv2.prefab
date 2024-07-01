@@ -426,6 +426,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4019777974701691803}
   - component: {fileID: 4713601467049031410}
+  - component: {fileID: 4988477808152822464}
   m_Layer: 0
   m_Name: pivot
   m_TagString: Untagged
@@ -484,6 +485,27 @@ MonoBehaviour:
   _cooldownRate: 2
   _fireParticles: {fileID: 5231467596157667203}
   _overheatParticles: {fileID: 8323034701544316343}
+--- !u!135 &4988477808152822464
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076155608493653715}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.8
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!1 &4199589707578752766
 GameObject:
   m_ObjectHideFlags: 0
