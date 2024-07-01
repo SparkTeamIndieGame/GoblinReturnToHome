@@ -6,9 +6,11 @@ public class AnimPlayer : MonoBehaviour
 {
     [SerializeField] private float _delay;
     [SerializeField] private GameObject _deathPanel;
-    [SerializeField] private SkinnedMeshRenderer _meshRender;
+    //[SerializeField] private SkinnedMeshRenderer _meshRender;
     [SerializeField] private ParticleSystem _walk, _jump;
+    [SerializeField] private Material _goblinMat;
 
+    private Color goblinColor;
     private Animator _animator;
     private PlayerController _player;
 
@@ -36,6 +38,7 @@ public class AnimPlayer : MonoBehaviour
     }
     private void Awake()
     {
+        goblinColor = _goblinMat.color;
         _animator = GetComponent<Animator>();
         _player = GetComponentInParent<PlayerController>();
     }
@@ -124,9 +127,13 @@ public class AnimPlayer : MonoBehaviour
 
     IEnumerator HitMaterial()
     {
-        _meshRender.materials[0].color = new Color32(255, 0, 0, 255);
+        //_meshRender.materials[0].color = new Color32(255, 0, 0, 255);
+        //yield return new WaitForSeconds(0.5f);
+        //_meshRender.materials[0].color = new Color32(150, 150, 150, 255);
+        
+        _goblinMat.color = new Color32(255, 0, 0, 255);
         yield return new WaitForSeconds(0.5f);
-        _meshRender.materials[0].color = new Color32(150, 150, 150, 255);
+        _goblinMat.color = goblinColor;
 
     }
 
