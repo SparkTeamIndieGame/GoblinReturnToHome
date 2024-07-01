@@ -710,6 +710,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765174706}
     m_Modifications:
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _delayDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2388537368140399108, guid: cd469471e957341108918e87e8e63c5a, type: 3}
       propertyPath: m_Name
       value: CrushBox (2)
@@ -3388,6 +3396,10 @@ PrefabInstance:
       propertyPath: _damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2335834191308393728, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
+      propertyPath: _delayDamage
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -600.37915
@@ -5520,6 +5532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap
       objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7524,6 +7544,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765174706}
     m_Modifications:
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _delayDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2388537368140399108, guid: cd469471e957341108918e87e8e63c5a, type: 3}
       propertyPath: m_Name
       value: CrushBox (1)
@@ -9458,6 +9486,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11196,6 +11232,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12401,7 +12445,7 @@ MonoBehaviour:
   - "\u0421\u0430\u043B\u0430\u0433\u0430"
   - "\u041A\u0438\u043B\u043B\u0435\u0440"
   - "\u0410\u043D\u043D\u0438\u0433\u0438\u043B\u044F\u0442\u043E\u0440"
-  _listRangeEnemy: 000000000e0000001800000027000000
+  _listRangeEnemy: 00000000060000000c00000012000000
 --- !u!95 &903034655
 Animator:
   serializedVersion: 5
@@ -13292,6 +13336,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765174706}
     m_Modifications:
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _delayDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2388537368140399108, guid: cd469471e957341108918e87e8e63c5a, type: 3}
       propertyPath: m_Name
       value: CrushBox (3)
@@ -14680,6 +14732,14 @@ PrefabInstance:
     - target: {fileID: 2795546744164641469, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
       propertyPath: m_Name
       value: Trap (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17194,6 +17254,10 @@ PrefabInstance:
       propertyPath: _damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2335834191308393728, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
+      propertyPath: _delayDamage
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.29358
@@ -17913,6 +17977,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Trap (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18053,6 +18125,14 @@ PrefabInstance:
     - target: {fileID: 2795546744164641469, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
       propertyPath: m_Name
       value: Trap (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18906,6 +18986,10 @@ PrefabInstance:
     - target: {fileID: 2335834191308393728, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: _damage
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2335834191308393728, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
+      propertyPath: _delayDamage
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23901,6 +23985,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1765174706}
     m_Modifications:
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _damage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 651773710859823219, guid: cd469471e957341108918e87e8e63c5a, type: 3}
+      propertyPath: _delayDamage
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2388537368140399108, guid: cd469471e957341108918e87e8e63c5a, type: 3}
       propertyPath: m_Name
       value: CrushBox
@@ -25329,6 +25421,10 @@ PrefabInstance:
       propertyPath: _damage
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2335834191308393728, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
+      propertyPath: _delayDamage
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 4225675781051566442, guid: dc35e9581abc1461cbe16f980f2cb70e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -348.83765
@@ -25603,6 +25699,14 @@ PrefabInstance:
     - target: {fileID: 2795546744164641469, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
       propertyPath: m_Name
       value: Trap (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _damage
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5327090576569771107, guid: 45bdfd4409a444193ab26056125099cf, type: 3}
+      propertyPath: _delayDamage
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,8 +8,8 @@ public class AnimPlayer : MonoBehaviour
     [SerializeField] private GameObject _deathPanel;
     //[SerializeField] private SkinnedMeshRenderer _meshRender;
     [SerializeField] private ParticleSystem _walk, _jump;
+    [SerializeField] private Material _ConstGoblinMat; //константа материала
     [SerializeField] private Material _goblinMat;
-
     private Color goblinColor;
     private Animator _animator;
     private PlayerController _player;
@@ -38,7 +38,7 @@ public class AnimPlayer : MonoBehaviour
     }
     private void Awake()
     {
-        goblinColor = _goblinMat.color;
+        goblinColor = _ConstGoblinMat.color;
         _animator = GetComponent<Animator>();
         _player = GetComponentInParent<PlayerController>();
     }
