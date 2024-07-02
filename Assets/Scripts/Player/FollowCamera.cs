@@ -26,7 +26,7 @@ public class FollowCamera : MonoBehaviour
     {
         _direction = _tight.localPosition.x;
 
-        UpView();
+        //UpView();
 
         if (_direction > 0)
         {
