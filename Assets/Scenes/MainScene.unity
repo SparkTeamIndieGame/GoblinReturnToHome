@@ -687,6 +687,7 @@ GameObject:
   - component: {fileID: 65774985}
   - component: {fileID: 65774984}
   - component: {fileID: 65774983}
+  - component: {fileID: 65774986}
   m_Layer: 5
   m_Name: Authors
   m_TagString: Untagged
@@ -711,7 +712,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 94, y: -204}
+  m_AnchoredPosition: {x: 94, y: -198}
   m_SizeDelta: {x: 565.456, y: 138.537}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &65774983
@@ -757,19 +758,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 65774984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1687231168}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &65774984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,6 +797,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 65774981}
   m_CullTransparentMesh: 1
+--- !u!114 &65774986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65774981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1687231168}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &71629486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +1930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3641851891836911996, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5901577512663579933, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Controller
       value: 
@@ -1985,6 +2007,7 @@ PrefabInstance:
     - {fileID: 3774043868296131353, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+    - {fileID: 6885804873467647876, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1356980381363673607, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 1445141344038280620, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
@@ -4296,9 +4319,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1236174591}
     m_Modifications:
+    - target: {fileID: 790569120458655663, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 792532064715084302, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 857472173951146614, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1112840078616808404, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3399794647830433834, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3641851891836911996, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5901577512663579933, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Controller
@@ -4373,6 +4416,7 @@ PrefabInstance:
     - {fileID: 3774043868296131353, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+    - {fileID: 6885804873467647876, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1356980381363673607, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 1445141344038280620, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
@@ -5463,6 +5507,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3641851891836911996, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5901577512663579933, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Controller
       value: 
@@ -5536,6 +5584,7 @@ PrefabInstance:
     - {fileID: 3774043868296131353, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+    - {fileID: 6885804873467647876, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1356980381363673607, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 1445141344038280620, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
@@ -6711,7 +6760,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Build Version 0207
+  m_Text: Build Version 0307
 --- !u!222 &1626327954
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7024,6 +7073,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3641851891836911996, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5901577512663579933, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Controller
       value: 
@@ -7097,6 +7150,7 @@ PrefabInstance:
     - {fileID: 3774043868296131353, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+    - {fileID: 6885804873467647876, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1356980381363673607, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 1445141344038280620, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
@@ -7667,6 +7721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3641851891836911996, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5901577512663579933, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
       propertyPath: m_Controller
       value: 
@@ -7740,6 +7798,7 @@ PrefabInstance:
     - {fileID: 3774043868296131353, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 7439012290162843012, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 2288182275346818656, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
+    - {fileID: 6885804873467647876, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1356980381363673607, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
     - {fileID: 1445141344038280620, guid: b6829818a6cc74683aabee842ba0a497, type: 3}
