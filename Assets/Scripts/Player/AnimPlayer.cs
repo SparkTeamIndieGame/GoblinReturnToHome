@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using YG;
 
 public class AnimPlayer : MonoBehaviour
 {
@@ -32,7 +33,6 @@ public class AnimPlayer : MonoBehaviour
         BoxCrush.DamagePLayer -= Damage;
         FXObstacle.Damage -= Damage;
         BeeMove.DamageBee -= Damage;
-
 
 
     }
@@ -91,6 +91,13 @@ public class AnimPlayer : MonoBehaviour
         }
     }
 
+    private void Live(float i)
+    {
+        _player.GetComponent<CharacterController>().enabled = true;
+        _player.Health = _player.maxHealth;
+        gameObject.SetActive(true);
+    }
+
     private void Damage(float damage)
     {
         _player.Health -= damage;
@@ -109,6 +116,7 @@ public class AnimPlayer : MonoBehaviour
     private void DeadAnim()
     {
         _animator.SetBool("Dead", true);
+        _player.GetComponent<CharacterController>().enabled = false;
         StartCoroutine("Dead");
 
     }
@@ -125,7 +133,9 @@ public class AnimPlayer : MonoBehaviour
         _deathPanel.SetActive(true);
         DeathPanel._isDeath = true;
         _goblinMat.color = _ConstGoblinMat.color;
-        Destroy(transform.parent.gameObject);
+        gameObject.SetActive(false);
+        //StopAllCoroutines();
+        //Destroy(transform.parent.gameObject);
     }
 
     IEnumerator HitMaterial()

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 
 public class LoaderScens : MonoBehaviour
 {
@@ -23,14 +24,16 @@ public class LoaderScens : MonoBehaviour
         SceneManager.LoadScene(NumberScene + 1);
     }
 
-    public void UnlockLevel(int index)
+    public void UnlockLevel()
     {
-        LockSystem.UnlockLevel[index - 2] = true;
+        LockSystem.UnlockLevel[SceneManager.GetActiveScene().buildIndex - 2] = true;
+        LockSystem.Save();
     }
 
     public void LoadMenu()
     {
         Time.timeScale = 1;
+        YandexGame.ReviewShow(YandexGame.EnvironmentData.reviewCanShow);
         SceneManager.LoadScene(0);
     }
 

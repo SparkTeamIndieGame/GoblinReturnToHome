@@ -17,12 +17,15 @@ public class FinishLvl : MonoBehaviour
     {
         if(_bossFight)
         {
-            _cutScene.SetActive(true);
-            Cursor.visible = false;
-            foreach (var off in _offGameObject)
-                off.SetActive(false);
+            //_cutScene.SetActive(true);
+            //Cursor.visible = false;
+            //foreach (var off in _offGameObject)
+            //    off.SetActive(false);
 
-            StartCoroutine("NextLevel");
+            //StartCoroutine("NextLevel");
+            _finishScene.SetActive(true);
+            _inputSystem.SetActive(false);
+            AudioSystem.insance._win.Play();
         }
         else
         {
@@ -34,14 +37,14 @@ public class FinishLvl : MonoBehaviour
 
     }
 
-    IEnumerator NextLevel()
-    {
-        yield return new WaitForSeconds(_time);
-        {
-            var NumberScene = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(NumberScene + 1);
+    //IEnumerator NextLevel()
+    //{
+    //    yield return new WaitForSeconds(_time);
+    //    {
+    //        var NumberScene = SceneManager.GetActiveScene().buildIndex;
+    //        SceneManager.LoadScene(NumberScene + 1);
 
-        }
-    }
+    //    }
+    //}
 
 }

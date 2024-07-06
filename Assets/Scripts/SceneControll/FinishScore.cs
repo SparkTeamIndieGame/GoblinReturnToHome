@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using YG;
 
 public class FinishScore : MonoBehaviour
 {
@@ -13,7 +14,12 @@ public class FinishScore : MonoBehaviour
     [SerializeField] private Text _rank;
     [SerializeField] private List<string> _listRank;
     [SerializeField] private List<int> _listRangeEnemy;
-    
+
+
+    private void Start()
+    {
+        Localisation();
+    }
     public void UpdateText()
     {
         if (_scoreControl != null)
@@ -41,5 +47,41 @@ public class FinishScore : MonoBehaviour
         else if (_scoreControl.GetKillScore() > _listRangeEnemy[3])
             _rank.text = _listRank[3];
 
+    }
+
+    private void Localisation()
+    {
+        switch (YandexGame.EnvironmentData.language)
+        {
+
+            case ("ru"):
+            {
+                    _listRank[0] = "Пацифист";
+                    _listRank[1] = "Салага";
+                    _listRank[2] = "Киллер";
+                    _listRank[3] = "Аннигилятор";
+                    break;
+            }
+
+            case ("en"):
+                {
+                    _listRank[0] = "Pacifist";
+                    _listRank[1] = "Salaga";
+                    _listRank[2] = "Killer";
+                    _listRank[3] = "Annihilator";
+                    break;
+                }
+
+            case ("tr"):
+                {
+                    _listRank[0] = "Pacifist";
+                    _listRank[1] = "Salaga";
+                    _listRank[2] = "Katil";
+                    _listRank[3] = "Annihilator";
+                    break;
+                }
+            default:
+                break;
+        }
     }
 }

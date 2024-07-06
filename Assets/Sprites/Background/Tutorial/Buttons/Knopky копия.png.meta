@@ -82,14 +82,14 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
@@ -152,12 +152,12 @@ TextureImporter:
       name: "Knopky \u043A\u043E\u043F\u0438\u044F_2"
       rect:
         serializedVersion: 2
-        x: 207
-        y: 1009
-        width: 15
-        height: 37
+        x: 112
+        y: 721
+        width: 345
+        height: 341
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,48 +165,6 @@ TextureImporter:
       bones: []
       spriteID: d9e7a9fbee232154aa90ae26cce07390
       internalID: -50047295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Knopky \u043A\u043E\u043F\u0438\u044F_39"
-      rect:
-        serializedVersion: 2
-        x: 616
-        y: 737
-        width: 163
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c715d6719eeff7645883285f0e2e30e2
-      internalID: 87450612
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "Knopky \u043A\u043E\u043F\u0438\u044F_40"
-      rect:
-        serializedVersion: 2
-        x: 943
-        y: 737
-        width: 163
-        height: 149
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d93d4e4b349f7d46b414ad9e18419e4
-      internalID: -122955429
       vertices: []
       indices: 
       edges: []
@@ -220,7 +178,7 @@ TextureImporter:
         width: 772
         height: 81
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,7 +199,7 @@ TextureImporter:
         width: 763
         height: 93
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,7 +220,7 @@ TextureImporter:
         width: 609
         height: 141
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -275,13 +233,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Knopky \u043A\u043E\u043F\u0438\u044F_110"
+      name: "Knopky \u043A\u043E\u043F\u0438\u044F_0"
       rect:
         serializedVersion: 2
-        x: 150
-        y: 34
-        width: 687
-        height: 150
+        x: 578
+        y: 725
+        width: 581
+        height: 342
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf531f365574c0247a55c59bda27491b
-      internalID: 1646163159
+      spriteID: 5cb15d1b8a0084d2caedf876978ad8b1
+      internalID: -1436190696
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Knopky \u043A\u043E\u043F\u0438\u044F_111"
+      name: "Knopky \u043A\u043E\u043F\u0438\u044F_1"
       rect:
         serializedVersion: 2
-        x: 1121
-        y: 36
-        width: 687
-        height: 150
+        x: 1196
+        y: 740
+        width: 689
+        height: 327
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,8 +268,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0acc596e7461fc343b4fe2433dd0041a
-      internalID: -133351237
+      spriteID: 3189f6092208c4eaa94cc6737edba67a
+      internalID: -363772734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Knopky \u043A\u043E\u043F\u0438\u044F_3"
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 11
+        width: 751
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76fc4ae60a82d4518abf0be1f2cac6ac
+      internalID: -665543561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Knopky \u043A\u043E\u043F\u0438\u044F_4"
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 16
+        width: 768
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a3c4ce2fbd44ae797477bc7c42eb53
+      internalID: -1938840962
       vertices: []
       indices: 
       edges: []

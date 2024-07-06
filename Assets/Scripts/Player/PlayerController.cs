@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 using System;
 
 public class PlayerController : MonoBehaviour
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _maxJumpCount;
 
     private CharacterController _characterController;
+    private AnimPlayer _skinPlayer;
 
     private Vector2 _input;
     private Vector3 _direction;
@@ -28,8 +30,9 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         _characterController = GetComponent<CharacterController>();
+        _skinPlayer = GetComponentInChildren<AnimPlayer>();
         //maxHealth = 999999;
-        Health = maxHealth;
+        maxHealth = Health;
     }
 
     void Update()
@@ -99,6 +102,15 @@ public class PlayerController : MonoBehaviour
         transform.position = _blockZ;
     }
 
+    public void Live()
+    {
+        _characterController.enabled = true;
+        Health = 9999;
+        _skinPlayer.gameObject.SetActive(true);
+        StartCoroutine(InfityHP());
+    }
+
+
     
     public void AddHealth(float value)
     {
@@ -110,6 +122,13 @@ public class PlayerController : MonoBehaviour
         {
             Health += value;
         }
+    }
+
+    IEnumerator InfityHP()
+    {
+        yield return new WaitForSeconds(5);
+        Health = maxHealth;
+        StopCoroutine(InfityHP());
     }
     
 

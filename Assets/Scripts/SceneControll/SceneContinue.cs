@@ -3,14 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class SceneContinue : MonoBehaviour
 {
-    
+
     //void Update()
     //{
-    //    if(Input.GetKeyDown(KeyCode.Alpha0))
+    //    if (Input.GetKeyDown(KeyCode.Alpha0))
     //    {
     //        SceneManager.LoadScene(0);
     //    }
-    //   else  if (Input.GetKeyDown(KeyCode.Alpha1))
+    //    else if (Input.GetKeyDown(KeyCode.Alpha1))
     //    {
     //        SceneManager.LoadScene(1);
     //    }
