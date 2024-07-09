@@ -12212,7 +12212,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -25506,9 +25506,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 505049170218044342, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1869830474}
-    - targetCorrespondingSourceObject: {fileID: 7173443938787561908, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1869830473}
     - targetCorrespondingSourceObject: {fileID: 1858629809448583575, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1956886134}
@@ -25577,22 +25574,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1869830467 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7173443938787561908, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
-  m_PrefabInstance: {fileID: 1869830458}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1869830468 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3663765377788829381, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
-  m_PrefabInstance: {fileID: 1869830458}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869830467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1869830469 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 505049170218044342, guid: 6353a594372d84659b1be0c77f29d1d8, type: 3}
@@ -25625,57 +25606,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1869830473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869830467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f34f36451b093ee4c83ad4aa5459d2ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textLComponent: {fileID: 1869830468}
-  infoYG: {fileID: 11400000, guid: 162644796a8b0d044bce3d6fda0641e3, type: 2}
-  text: 
-  ru: "\u0412\u043E\u0437\u0440\u0430\u0434\u0438\u0442\u044C\u0441\u044F \u0437\u0430
-    \u0440\u0435\u043A\u043B\u0430\u043C\u0443?"
-  en: Be happy for the advertising?
-  tr: Reklamdan memnun musunuz?
-  az: 
-  be: 
-  he: 
-  hy: 
-  ka: 
-  et: 
-  fr: 
-  kk: 
-  ky: 
-  lt: 
-  lv: 
-  ro: 
-  tg: 
-  tk: 
-  uk: 
-  uz: 
-  es: 
-  pt: 
-  ar: 
-  id: 
-  ja: 
-  it: 
-  de: 
-  hi: 
-  changeOnlyFont: 0
-  fontNumber: 0
-  uniqueFont: {fileID: 0}
-  additionalText: {fileID: 0}
-  textHeight: 20
-  processTranslateLabel: 3/19 completed
-  componentTextField: 1
-  countLang: 3
 --- !u!114 &1869830474
 MonoBehaviour:
   m_ObjectHideFlags: 0
