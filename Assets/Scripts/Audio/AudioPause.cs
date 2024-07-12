@@ -18,9 +18,13 @@ public class AudioPause : MonoBehaviour
 
     void Start()
     {
-        _image.sprite = _sprite[0];
-        _image.color = _color[0];
-        _musOn = true;
+        if(YG.YandexGame.savesData.isFirstSession)
+        {
+            _image.sprite = _sprite[0];
+            _image.color = _color[0];
+            _musOn = true;
+        }
+
 
     }
 
